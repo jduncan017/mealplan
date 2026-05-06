@@ -24,3 +24,8 @@ export function formatDayShort(iso: string): string {
 export function isWeekend(dayName: string): boolean {
   return dayName === "Sat" || dayName === "Sun";
 }
+
+export function todayISO(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}

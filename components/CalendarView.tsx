@@ -15,7 +15,7 @@ import type { CalendarDay, Recipe, RecipeCategory } from "@/data/types";
 import { CategoryIcon } from "./CategoryIcon";
 import { Tag } from "./Tag";
 import { RecipeImage } from "./RecipeImage";
-import { formatDayLong, formatDayShort, isWeekend } from "@/lib/week";
+import { formatDayLong, formatDayShort, isWeekend, todayISO } from "@/lib/week";
 import { PageHeader } from "./PageHeader";
 import { resolveMealRecipe, previousDayDinner } from "@/lib/mealLookup";
 
@@ -38,9 +38,13 @@ export function CalendarView({
 
   const dateParam = params.get("date");
   const viewParam = params.get("view");
+  const today = todayISO();
+  const todayInPlan = days.some((x) => x.date === today);
   const cursor =
     dateParam && days.some((x) => x.date === dateParam)
       ? dateParam
+      : todayInPlan
+      ? today
       : days[0].date;
   const mode: ViewMode = isViewMode(viewParam) ? viewParam : "week";
 
@@ -119,6 +123,7 @@ export function CalendarView({
           onPrev={() => shiftWeek(-1)}
           onNext={() => shiftWeek(1)}
           weekIndex={currentDay.weekIndex}
+          today={today}
         />
       )}
       {mode === "month" && (
@@ -127,6 +132,7 @@ export function CalendarView({
           recipeBySlug={recipeBySlug}
           cursor={cursor}
           onSelect={(d) => updateUrl({ cursor: d, mode: "day" })}
+          today={today}
         />
       )}
     </>
@@ -366,6 +372,7 @@ function WeekView({
   onPrev,
   onNext,
   weekIndex,
+  today,
 }: {
   weekDays: CalendarDay[];
   recipeBySlug: Map<string, Recipe>;
@@ -373,6 +380,7 @@ function WeekView({
   onPrev: () => void;
   onNext: () => void;
   weekIndex: number;
+  today: string;
 }) {
   const first = weekDays[0];
   const last = weekDays[weekDays.length - 1];
@@ -392,6 +400,7 @@ function WeekView({
             day={d}
             recipe={recipeBySlug.get(d.dinnerSlug)}
             onSelect={onSelect}
+            isToday={d.date === today}
           />
         ))}
       </div>
@@ -419,11 +428,13 @@ function MonthView({
   recipeBySlug,
   cursor,
   onSelect,
+  today,
 }: {
   days: CalendarDay[];
   recipeBySlug: Map<string, Recipe>;
   cursor: string;
   onSelect: (date: string) => void;
+  today: string;
 }) {
   const byDate = new Map(days.map((d) => [d.date, d]));
   const first = new Date("2026-05-01T00:00:00");
@@ -446,6 +457,7 @@ function MonthView({
             day={d}
             recipe={recipeBySlug.get(d.dinnerSlug)}
             onSelect={onSelect}
+            isToday={d.date === today}
           />
         ))}
       </div>
@@ -467,13 +479,16 @@ function MonthView({
             return <div key={i} className="aspect-square rounded-md" />;
           const { date, day } = cell;
           const active = date === cursor;
+          const isToday = date === today;
           const recipe = recipeBySlug.get(day.dinnerSlug);
           return (
             <button
               key={i}
               onClick={() => onSelect(date)}
               className={`group relative aspect-square overflow-hidden rounded-md shadow-card transition hover:-translate-y-0.5 hover:shadow-lift ${
-                active
+                isToday
+                  ? "ring-2 ring-secondary-300 ring-offset-2 ring-offset-background"
+                  : active
                   ? "ring-2 ring-primary-300 ring-offset-2 ring-offset-background"
                   : ""
               }`}
@@ -509,16 +524,20 @@ function DayListItem({
   day,
   recipe,
   onSelect,
+  isToday = false,
 }: {
   day: CalendarDay;
   recipe?: Recipe;
   onSelect: (date: string) => void;
+  isToday?: boolean;
 }) {
   const weekend = isWeekend(day.dayName);
   return (
     <button
       onClick={() => onSelect(day.date)}
-      className="flex w-full items-stretch gap-3 overflow-hidden rounded-card border border-app-border bg-surface text-left shadow-card transition hover:-translate-y-0.5 hover:shadow-lift"
+      className={`flex w-full items-stretch gap-3 overflow-hidden rounded-card border border-app-border bg-surface text-left shadow-card transition hover:-translate-y-0.5 hover:shadow-lift ${
+        isToday ? "ring-2 ring-secondary-300 ring-offset-2 ring-offset-background" : ""
+      }`}
     >
       <div
         className={`flex w-14 shrink-0 flex-col items-center justify-center py-3 text-white sm:w-16 ${

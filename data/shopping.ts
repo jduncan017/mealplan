@@ -3,6 +3,322 @@ import type { ShoppingWeek } from "./types";
 
 export const shopping: ShoppingWeek[] = [
   {
+    "week": 0,
+    "dateLabel": "Buy once for the month — bulk-friendly items used across multiple weeks",
+    "sections": [
+      {
+        "name": "Proteins (freeze portions)",
+        "items": [
+          {
+            "name": "Boneless skinless chicken thighs",
+            "qty": "6 lb (split into 2 freezer bags)",
+            "for": "Week 1 + Week 4 Instant Pot batches"
+          },
+          {
+            "name": "Ground turkey (93/7)",
+            "qty": "6 lb (split into ~1.25 lb portions)",
+            "for": "Stuffed peppers + meatballs + taco skillet across Weeks 2–5"
+          },
+          {
+            "name": "Boneless pork shoulder",
+            "qty": "7 lb (one chunk per pulled pork batch)",
+            "for": "Week 3 + Week 5 Instant Pot pulled pork"
+          },
+          {
+            "name": "Salmon fillets (6 oz, individually frozen)",
+            "qty": "8",
+            "for": "Week 2 + Week 4 sheet pan salmon"
+          },
+          {
+            "name": "Chicken breast",
+            "qty": "3 lb",
+            "for": "Fajitas + tortilla soup + dump soup"
+          },
+          {
+            "name": "Chicken cutlets",
+            "qty": "4 lb (freeze in pairs)",
+            "for": "Week 3 + Week 5 chicken parm"
+          },
+          {
+            "name": "Bone-in skin-on chicken thighs",
+            "qty": "16 (2 packs)",
+            "for": "Week 2 + Week 5 Greek chicken"
+          }
+        ]
+      },
+      {
+        "name": "Pantry / Dry (long shelf)",
+        "items": [
+          {
+            "name": "Rolled oats",
+            "qty": "large canister",
+            "for": "Overnight oats every week"
+          },
+          {
+            "name": "Chia seeds",
+            "qty": "1 lb bag",
+            "for": "Overnight oats + chia pudding + smoothies"
+          },
+          {
+            "name": "Whey or plant protein powder",
+            "qty": "1 large tub",
+            "for": "Smoothie + overnight oats every week"
+          },
+          {
+            "name": "Peanut butter",
+            "qty": "large jar",
+            "for": "Snacks + overnight oats + smoothie"
+          },
+          {
+            "name": "Granola",
+            "qty": "large bag",
+            "for": "Yogurt parfaits"
+          },
+          {
+            "name": "Quinoa",
+            "qty": "2 lb bag",
+            "for": "Stuffed peppers + power bowls"
+          },
+          {
+            "name": "Rice (jasmine or long grain)",
+            "qty": "5 lb bag",
+            "for": "Skillets + bowls"
+          },
+          {
+            "name": "Pearl barley",
+            "qty": "1 lb bag",
+            "for": "Beef and barley soup"
+          },
+          {
+            "name": "Red lentils",
+            "qty": "1 lb bag",
+            "for": "Red lentil soup"
+          },
+          {
+            "name": "Pasta (rigatoni or penne)",
+            "qty": "2 boxes",
+            "for": "Meatballs + chicken parm"
+          },
+          {
+            "name": "Whole wheat pasta",
+            "qty": "2 boxes",
+            "for": "Chicken parm Weeks 3 + 5"
+          },
+          {
+            "name": "Acini de pepe or orzo",
+            "qty": "1 box",
+            "for": "Wedding soup + dump soup"
+          },
+          {
+            "name": "Small corn tortillas",
+            "qty": "4 dozen",
+            "for": "Tacos + enchilada skillet"
+          },
+          {
+            "name": "Flour tortillas (taco/fajita size)",
+            "qty": "2 packs",
+            "for": "Fajitas + barbacoa"
+          },
+          {
+            "name": "Large flour tortillas (burrito size)",
+            "qty": "2 packs (12 ct)",
+            "for": "Breakfast burritos"
+          },
+          {
+            "name": "Brioche or hamburger buns",
+            "qty": "2 packs",
+            "for": "BBQ pulled pork sandwiches"
+          },
+          {
+            "name": "Panko breadcrumbs",
+            "qty": "large box",
+            "for": "Egg muffins + meatballs + chicken parm"
+          },
+          {
+            "name": "Black beans (canned)",
+            "qty": "8 cans",
+            "for": "Tacos, skillets, bowls, tortilla soup"
+          },
+          {
+            "name": "Cannellini / white beans (canned)",
+            "qty": "4 cans",
+            "for": "Dump soup + white bean soup"
+          },
+          {
+            "name": "Diced tomatoes (canned)",
+            "qty": "4 cans",
+            "for": "Skillets + soups"
+          },
+          {
+            "name": "Fire roasted diced tomatoes",
+            "qty": "4 cans",
+            "for": "Stuffed peppers + tortilla soup"
+          },
+          {
+            "name": "Diced tomatoes with green chiles",
+            "qty": "3 cans",
+            "for": "Taco skillet + tortilla soup"
+          },
+          {
+            "name": "Tomato paste (tube or small cans)",
+            "qty": "1 tube + 2 cans",
+            "for": "Beef barley + red lentil"
+          },
+          {
+            "name": "Marinara sauce",
+            "qty": "2 large jars (48 oz total)",
+            "for": "Chicken parm + meatballs + stuffed peppers"
+          },
+          {
+            "name": "Red enchilada sauce",
+            "qty": "2 cans (28 oz total)",
+            "for": "Enchilada skillet Weeks 1 + 4"
+          },
+          {
+            "name": "Salsa (jarred, medium)",
+            "qty": "2 large jars (32 oz total)",
+            "for": "Tacos + burritos + bowls + skillets"
+          },
+          {
+            "name": "BBQ sauce",
+            "qty": "1 large bottle",
+            "for": "Pulled pork Weeks 3 + 5"
+          },
+          {
+            "name": "Apple cider vinegar",
+            "qty": "1 bottle",
+            "for": "Pulled pork brine + slaw dressing"
+          },
+          {
+            "name": "Worcestershire sauce",
+            "qty": "1 bottle",
+            "for": "Beef barley + pot roast"
+          },
+          {
+            "name": "Frank's RedHot (or buffalo sauce)",
+            "qty": "1 bottle",
+            "for": "Buffalo sweet potatoes + buffalo wraps"
+          },
+          {
+            "name": "Low sodium chicken broth",
+            "qty": "8 quarts (carton 4-pack x 2)",
+            "for": "Soups every week"
+          },
+          {
+            "name": "Beef broth",
+            "qty": "2 quarts",
+            "for": "Pot roast + beef barley"
+          },
+          {
+            "name": "Olive oil",
+            "qty": "large bottle",
+            "for": "Cooking + dressings"
+          },
+          {
+            "name": "Spice basics",
+            "qty": "as needed",
+            "for": "Chili powder, cumin, smoked paprika, oregano, Italian seasoning, taco seasoning, fajita seasoning, garlic + onion powder, thyme, bay leaves"
+          },
+          {
+            "name": "Brown sugar + flour",
+            "qty": "small bags",
+            "for": "Pulled pork rub + chicken parm dredge"
+          }
+        ]
+      },
+      {
+        "name": "Dairy / Bulk",
+        "items": [
+          {
+            "name": "Plain Greek yogurt (full fat)",
+            "qty": "Costco tub (32 oz x 2)",
+            "for": "Breakfasts + sauces every week"
+          },
+          {
+            "name": "Cottage cheese (full fat)",
+            "qty": "Costco tub",
+            "for": "Egg muffins + breakfasts"
+          },
+          {
+            "name": "Butter",
+            "qty": "1 lb (4 sticks)",
+            "for": "Pot roast + buffalo sweet potatoes + cooking"
+          },
+          {
+            "name": "Parmesan (grated, pasteurized)",
+            "qty": "Costco tub",
+            "for": "Chicken parm + meatballs + soups"
+          },
+          {
+            "name": "Mozzarella shredded (pasteurized)",
+            "qty": "2 lb bag",
+            "for": "Stuffed peppers + chicken parm"
+          },
+          {
+            "name": "Shredded Monterey Jack (pasteurized)",
+            "qty": "2 lb bag",
+            "for": "Enchilada skillet + tortilla soup + tacos"
+          },
+          {
+            "name": "Shredded cheddar (pasteurized)",
+            "qty": "2 lb bag",
+            "for": "Egg muffins + taco skillets"
+          }
+        ]
+      },
+      {
+        "name": "Frozen",
+        "items": [
+          {
+            "name": "Frozen mixed berries",
+            "qty": "Costco bag (4 lb)",
+            "for": "Smoothies + parfaits + oats every week"
+          },
+          {
+            "name": "Frozen corn",
+            "qty": "2 large bags",
+            "for": "Skillets + soups"
+          },
+          {
+            "name": "Frozen shelled edamame",
+            "qty": "1 large bag",
+            "for": "Snacks"
+          }
+        ]
+      },
+      {
+        "name": "Snack Stocking",
+        "items": [
+          {
+            "name": "Almonds",
+            "qty": "Costco bag",
+            "for": "Snacks + parfaits"
+          },
+          {
+            "name": "Dried apricots",
+            "qty": "1 large bag",
+            "for": "Iron-rich snack"
+          },
+          {
+            "name": "Whole grain crackers",
+            "qty": "Costco box",
+            "for": "Cheese snacks + tuna"
+          },
+          {
+            "name": "Hummus",
+            "qty": "Costco 2-pack",
+            "for": "Snacks + wraps"
+          },
+          {
+            "name": "String cheese (pasteurized)",
+            "qty": "Costco pack",
+            "for": "Snacks + rollups"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week": 1,
     "dateLabel": "Sun Apr 26 - Sat May 2",
     "sections": [
@@ -53,6 +369,16 @@ export const shopping: ShoppingWeek[] = [
             "name": "Garlic head",
             "qty": "1",
             "for": ""
+          },
+          {
+            "name": "Baby spinach",
+            "qty": "5 oz",
+            "for": "Egg muffins"
+          },
+          {
+            "name": "Green onions",
+            "qty": "1 bunch",
+            "for": "Enchilada skillet garnish"
           }
         ]
       },
@@ -68,6 +394,16 @@ export const shopping: ShoppingWeek[] = [
             "name": "Shredded Monterey Jack (pasteurized)",
             "qty": "8 oz",
             "for": ""
+          },
+          {
+            "name": "Shredded cheddar (pasteurized)",
+            "qty": "8 oz",
+            "for": "Egg muffins"
+          },
+          {
+            "name": "Diced ham or breakfast turkey sausage",
+            "qty": "8 oz",
+            "for": "Egg muffins filling"
           },
           {
             "name": "Plain Greek yogurt (full fat)",
@@ -153,6 +489,11 @@ export const shopping: ShoppingWeek[] = [
             "name": "Spices: chili powder, cumin, smoked paprika, oregano, Italian seasoning",
             "qty": "as needed",
             "for": ""
+          },
+          {
+            "name": "Salsa (jarred, medium)",
+            "qty": "16 oz jar",
+            "for": "Tacos Fri + enchilada skillet Sat"
           }
         ]
       },
@@ -334,6 +675,21 @@ export const shopping: ShoppingWeek[] = [
             "name": "Apples",
             "qty": "3",
             "for": "Snacks"
+          },
+          {
+            "name": "Bananas",
+            "qty": "6",
+            "for": "Smoothies + overnight oats"
+          },
+          {
+            "name": "Cherry tomatoes",
+            "qty": "1 pint",
+            "for": "Power bowl Sun + cobb jar Sat"
+          },
+          {
+            "name": "Romaine",
+            "qty": "1 head",
+            "for": "Cobb jar"
           }
         ]
       },
@@ -377,8 +733,8 @@ export const shopping: ShoppingWeek[] = [
           },
           {
             "name": "Large eggs",
-            "qty": "1 dozen",
-            "for": ""
+            "qty": "2 dozen",
+            "for": "Egg muffins Fri/Sat + breakfast burritos prep"
           },
           {
             "name": "Pepperoncini",
@@ -464,6 +820,71 @@ export const shopping: ShoppingWeek[] = [
             "name": "Beef broth",
             "qty": "16 oz",
             "for": "Pot roast"
+          },
+          {
+            "name": "Chipotle in adobo",
+            "qty": "1 small can",
+            "for": "Barbacoa tacos Thu"
+          },
+          {
+            "name": "Queso fresco or cotija (pasteurized)",
+            "qty": "6 oz",
+            "for": "Barbacoa tacos topping"
+          },
+          {
+            "name": "Pumpkin seeds",
+            "qty": "small bag",
+            "for": "Power bowl Sun"
+          },
+          {
+            "name": "Sour cream (or Greek yogurt sub)",
+            "qty": "8 oz",
+            "for": "Tacos + skillet topping"
+          }
+        ]
+      },
+      {
+        "name": "Breakfast Restock",
+        "items": [
+          {
+            "name": "Rolled oats",
+            "qty": "restock if low",
+            "for": "Overnight oats Sun/Mon"
+          },
+          {
+            "name": "Chia seeds",
+            "qty": "restock if low",
+            "for": "Overnight oats"
+          },
+          {
+            "name": "Granola",
+            "qty": "1 bag",
+            "for": "Yogurt parfait Tue"
+          },
+          {
+            "name": "Peanut butter",
+            "qty": "restock if low",
+            "for": "Overnight oats + smoothie"
+          },
+          {
+            "name": "Whey or plant protein powder",
+            "qty": "restock if low",
+            "for": "Smoothie + overnight oats"
+          },
+          {
+            "name": "Large flour tortillas (burrito size)",
+            "qty": "6",
+            "for": "Breakfast burritos prep"
+          },
+          {
+            "name": "Breakfast sausage or chorizo",
+            "qty": "8 oz",
+            "for": "Breakfast burritos"
+          },
+          {
+            "name": "Salsa (jarred, medium)",
+            "qty": "16 oz jar",
+            "for": "Burritos + Mon taco skillet + Thu barbacoa tacos"
           }
         ]
       },
@@ -598,8 +1019,8 @@ export const shopping: ShoppingWeek[] = [
           },
           {
             "name": "Baby spinach or escarole",
-            "qty": "6 oz",
-            "for": "Wedding soup"
+            "qty": "12 oz",
+            "for": "Wedding soup + smoothie + egg muffins"
           },
           {
             "name": "Romaine or cabbage",
@@ -678,8 +1099,8 @@ export const shopping: ShoppingWeek[] = [
           },
           {
             "name": "Large eggs",
-            "qty": "1 dozen",
-            "for": ""
+            "qty": "2 dozen",
+            "for": "Egg muffins Fri/Sat + breakfast burritos"
           },
           {
             "name": "Monterey Jack shredded",
@@ -690,6 +1111,21 @@ export const shopping: ShoppingWeek[] = [
             "name": "Mayo",
             "qty": "small jar",
             "for": "Slaw"
+          },
+          {
+            "name": "Queso fresco (pasteurized)",
+            "qty": "4 oz",
+            "for": "Carnitas bowl topping"
+          },
+          {
+            "name": "Hummus",
+            "qty": "1 tub",
+            "for": "Wrap Fri + snacks"
+          },
+          {
+            "name": "Feta (pasteurized)",
+            "qty": "4 oz",
+            "for": "Wrap Fri"
           }
         ]
       },
@@ -775,6 +1211,71 @@ export const shopping: ShoppingWeek[] = [
             "name": "Cilantro lime rice base",
             "qty": "2 cups cooked",
             "for": "Carnitas bowls"
+          },
+          {
+            "name": "Salsa (jarred, medium)",
+            "qty": "16 oz jar",
+            "for": "Carnitas bowls Mon + fajitas Thu + skillet Fri"
+          },
+          {
+            "name": "Red lentils",
+            "qty": "1.5 cups dry",
+            "for": "Red lentil soup Sat"
+          },
+          {
+            "name": "Tomato paste",
+            "qty": "small can or tube",
+            "for": "Red lentil soup"
+          },
+          {
+            "name": "Black beans (canned)",
+            "qty": "2 cans",
+            "for": "Carnitas bowls Mon + power bowl Sun"
+          },
+          {
+            "name": "Chickpeas (canned)",
+            "qty": "1 can",
+            "for": "Cobb jar + power bowl"
+          },
+          {
+            "name": "Sour cream",
+            "qty": "8 oz",
+            "for": "Fajitas Thu + carnitas bowls"
+          }
+        ]
+      },
+      {
+        "name": "Breakfast Restock",
+        "items": [
+          {
+            "name": "Rolled oats",
+            "qty": "restock if low",
+            "for": "Overnight oats Sun/Mon"
+          },
+          {
+            "name": "Chia seeds",
+            "qty": "restock if low",
+            "for": "Overnight oats"
+          },
+          {
+            "name": "Granola",
+            "qty": "1 bag",
+            "for": "Yogurt parfait Tue"
+          },
+          {
+            "name": "Peanut butter",
+            "qty": "restock if low",
+            "for": "Overnight oats + smoothie"
+          },
+          {
+            "name": "Whey or plant protein powder",
+            "qty": "restock if low",
+            "for": "Smoothie + overnight oats"
+          },
+          {
+            "name": "Large flour tortillas (burrito size)",
+            "qty": "6",
+            "for": "Breakfast burritos"
           }
         ]
       },
@@ -979,8 +1480,43 @@ export const shopping: ShoppingWeek[] = [
           },
           {
             "name": "Large eggs",
-            "qty": "1 dozen",
-            "for": ""
+            "qty": "2 dozen",
+            "for": "Egg muffins Fri/Sat + breakfast burritos"
+          },
+          {
+            "name": "Butter",
+            "qty": "1 stick",
+            "for": "Buffalo sweet potatoes Mon"
+          },
+          {
+            "name": "Queso fresco (pasteurized)",
+            "qty": "6 oz",
+            "for": "Tacos Sun"
+          },
+          {
+            "name": "Sour cream",
+            "qty": "8 oz",
+            "for": "Tacos + skillet topping"
+          }
+        ]
+      },
+      {
+        "name": "Produce extras",
+        "items": [
+          {
+            "name": "Fresh basil",
+            "qty": "1 package",
+            "for": "Turkey meatballs Wed"
+          },
+          {
+            "name": "Cherry tomatoes",
+            "qty": "1 pint",
+            "for": "Power bowl Sun + cobb jar Sat"
+          },
+          {
+            "name": "Romaine",
+            "qty": "1 head",
+            "for": "Cobb jar"
           }
         ]
       },
@@ -1051,6 +1587,61 @@ export const shopping: ShoppingWeek[] = [
             "name": "Bay leaves, thyme",
             "qty": "as needed",
             "for": ""
+          },
+          {
+            "name": "Salsa (jarred, medium)",
+            "qty": "16 oz jar",
+            "for": "Shredded chicken tacos Sun + enchilada skillet Tue"
+          },
+          {
+            "name": "Panko breadcrumbs",
+            "qty": "small box",
+            "for": "Turkey meatballs Wed"
+          },
+          {
+            "name": "Tomato paste",
+            "qty": "small can or tube",
+            "for": "Beef and barley soup Thu"
+          }
+        ]
+      },
+      {
+        "name": "Breakfast Restock",
+        "items": [
+          {
+            "name": "Rolled oats",
+            "qty": "restock if low",
+            "for": "Overnight oats Sun/Mon"
+          },
+          {
+            "name": "Chia seeds",
+            "qty": "restock if low",
+            "for": "Overnight oats"
+          },
+          {
+            "name": "Granola",
+            "qty": "1 bag",
+            "for": "Yogurt parfait Tue"
+          },
+          {
+            "name": "Peanut butter",
+            "qty": "restock if low",
+            "for": "Overnight oats + smoothie"
+          },
+          {
+            "name": "Whey or plant protein powder",
+            "qty": "restock if low",
+            "for": "Smoothie + overnight oats"
+          },
+          {
+            "name": "Large flour tortillas (burrito size)",
+            "qty": "6",
+            "for": "Breakfast burritos"
+          },
+          {
+            "name": "Baby spinach",
+            "qty": "8 oz",
+            "for": "Smoothie + egg muffins"
           }
         ]
       },
@@ -1260,8 +1851,8 @@ export const shopping: ShoppingWeek[] = [
           },
           {
             "name": "Large eggs",
-            "qty": "1 dozen",
-            "for": ""
+            "qty": "2 dozen",
+            "for": "Egg muffins Fri/Sat + breakfast burritos prep"
           },
           {
             "name": "Feta",
@@ -1277,6 +1868,41 @@ export const shopping: ShoppingWeek[] = [
             "name": "Mayo",
             "qty": "restock",
             "for": ""
+          },
+          {
+            "name": "Shredded cheddar",
+            "qty": "8 oz",
+            "for": "Taco skillet Wed"
+          },
+          {
+            "name": "Queso fresco (pasteurized)",
+            "qty": "4 oz",
+            "for": "Carnitas bowl topping"
+          },
+          {
+            "name": "Sour cream",
+            "qty": "8 oz",
+            "for": "Fajitas Thu + skillet Wed"
+          },
+          {
+            "name": "Butter",
+            "qty": "1 stick",
+            "for": "Cooking + meatball pasta"
+          }
+        ]
+      },
+      {
+        "name": "Produce extras",
+        "items": [
+          {
+            "name": "Fresh basil",
+            "qty": "1 package",
+            "for": "Chicken parm Fri"
+          },
+          {
+            "name": "Kalamata olives",
+            "qty": "1 small jar",
+            "for": "Greek chicken Sun May 31"
           }
         ]
       },
@@ -1362,6 +1988,76 @@ export const shopping: ShoppingWeek[] = [
             "name": "Rice",
             "qty": "2 cups dry",
             "for": ""
+          },
+          {
+            "name": "Salsa (jarred, medium)",
+            "qty": "16 oz jar",
+            "for": "Carnitas Mon + taco skillet Wed + fajitas Thu + tortilla soup Sat"
+          },
+          {
+            "name": "Panko breadcrumbs",
+            "qty": "small box",
+            "for": "Chicken parm Fri"
+          },
+          {
+            "name": "Flour",
+            "qty": "small bag (if low)",
+            "for": "Chicken parm dredge"
+          },
+          {
+            "name": "Fajita seasoning or DIY mix",
+            "qty": "2 tbsp equivalent",
+            "for": "Fajitas Thu"
+          },
+          {
+            "name": "Taco seasoning",
+            "qty": "2 tbsp equivalent",
+            "for": "Taco skillet Wed"
+          },
+          {
+            "name": "Apple cider vinegar",
+            "qty": "restock if low",
+            "for": "Pulled pork + slaw"
+          }
+        ]
+      },
+      {
+        "name": "Breakfast Restock",
+        "items": [
+          {
+            "name": "Rolled oats",
+            "qty": "restock if low",
+            "for": "Overnight oats Sun/Mon/Sun"
+          },
+          {
+            "name": "Chia seeds",
+            "qty": "restock if low",
+            "for": "Overnight oats"
+          },
+          {
+            "name": "Granola",
+            "qty": "1 bag",
+            "for": "Yogurt parfait Tue"
+          },
+          {
+            "name": "Peanut butter",
+            "qty": "restock if low",
+            "for": "Overnight oats + smoothie"
+          },
+          {
+            "name": "Whey or plant protein powder",
+            "qty": "restock if low",
+            "for": "Smoothie + overnight oats"
+          },
+          {
+            "name": "Large flour tortillas (burrito size)",
+            "qty": "6",
+            "for": "Breakfast burritos"
+          },
+          {
+            "name": "Baby spinach",
+            "qty": "8 oz",
+            "for": "Smoothie + egg muffins"
           }
         ]
       },

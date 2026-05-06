@@ -2,22 +2,29 @@
 
 import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { Check, RotateCcw, ShoppingCart } from "lucide-react";
+import { Check, Package, RotateCcw, ShoppingCart } from "lucide-react";
 import type { ShoppingWeek } from "@/data/types";
 import { useLocalChecklist } from "@/lib/storage";
 import { PageHeader } from "./PageHeader";
+import { calendar } from "@/data/calendar";
+import { todayISO } from "@/lib/week";
 
 export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
   const params = useSearchParams();
-  const qsWeek = Number(params.get("week"));
-  const initial =
-    weeks.find((w) => w.week === qsWeek)?.week || weeks[0]?.week || 1;
+  const qsParam = params.get("week");
+  const qsWeek = qsParam !== null ? Number(qsParam) : NaN;
+  const hasQs = qsParam !== null && weeks.some((w) => w.week === qsWeek);
+  const todayWeek = calendar.find((d) => d.date === todayISO())?.weekIndex;
+  const firstReal = weeks.find((w) => w.week > 0)?.week || 1;
+  const initial = hasQs
+    ? qsWeek
+    : (todayWeek && weeks.find((w) => w.week === todayWeek)?.week) || firstReal;
 
   const [week, setWeek] = useState<number>(initial);
 
   useEffect(() => {
-    if (qsWeek && weeks.some((w) => w.week === qsWeek)) setWeek(qsWeek);
-  }, [qsWeek, weeks]);
+    if (hasQs) setWeek(qsWeek);
+  }, [hasQs, qsWeek]);
 
   const current = weeks.find((w) => w.week === week) || weeks[0];
   const { checks, toggle, reset, loaded } = useLocalChecklist(
@@ -36,7 +43,7 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
   return (
     <>
       <PageHeader
-        title="Shopping"
+        title={current.week === 0 ? "Wholesale" : "Shopping"}
         subtitle={current.dateLabel}
         right={
           <button
@@ -49,19 +56,28 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
       />
 
       <div className="mb-4 flex items-center gap-2 overflow-x-auto pb-1 no-print">
-        {weeks.map((w) => (
-          <button
-            key={w.week}
-            onClick={() => setWeek(w.week)}
-            className={`shrink-0 rounded-pill px-3.5 py-1.5 text-sm font-semibold transition ${
-              w.week === current.week
-                ? "bg-primary-300 text-white shadow-card"
-                : "bg-surface border border-mpneutral-200 text-mpneutral-400 hover:border-primary-200"
-            }`}
-          >
-            Week {w.week}
-          </button>
-        ))}
+        {weeks.map((w) => {
+          const isWholesale = w.week === 0;
+          const active = w.week === current.week;
+          return (
+            <button
+              key={w.week}
+              onClick={() => setWeek(w.week)}
+              className={`shrink-0 inline-flex items-center gap-1.5 rounded-pill px-3.5 py-1.5 text-sm font-semibold transition ${
+                active
+                  ? isWholesale
+                    ? "bg-tertiary-300 text-white shadow-card"
+                    : "bg-primary-300 text-white shadow-card"
+                  : isWholesale
+                  ? "bg-surface border border-tertiary-200 text-tertiary-400 hover:border-tertiary-300"
+                  : "bg-surface border border-mpneutral-200 text-mpneutral-400 hover:border-primary-200"
+              }`}
+            >
+              {isWholesale && <Package className="h-3.5 w-3.5" />}
+              {isWholesale ? "Wholesale" : `Week ${w.week}`}
+            </button>
+          );
+        })}
       </div>
 
       {loaded && (

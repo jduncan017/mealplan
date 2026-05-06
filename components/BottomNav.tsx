@@ -14,14 +14,14 @@ const items = [
   { href: "/", label: "Calendar", icon: CalendarDays, match: (p: string) => p === "/" },
   { href: "/recipes", label: "Recipes", icon: ChefHat, match: (p: string) => p.startsWith("/recipes") },
   { href: "/shopping", label: "Shopping", icon: ShoppingCart, match: (p: string) => p.startsWith("/shopping") },
-  { href: "/prep/1", label: "Prep", icon: ClipboardList, match: (p: string) => p.startsWith("/prep") },
+  { href: "/prep", label: "Prep", icon: ClipboardList, match: (p: string) => p.startsWith("/prep") },
   { href: "/nutrition", label: "Nutrition", icon: Apple, match: (p: string) => p.startsWith("/nutrition") },
 ];
 
 export function BottomNav() {
   const pathname = usePathname();
   return (
-    <nav className="fixed bottom-0 inset-x-0 z-40 border-t-2 border-app-border bg-surface shadow-navTop no-print">
+    <nav className="fixed bottom-0 inset-x-0 z-40 border-t-2 border-app-border bg-surface shadow-navTop no-print pb-[max(env(safe-area-inset-bottom),0.75rem)]">
       <ul className="mx-auto flex max-w-3xl items-stretch justify-between px-2">
         {items.map((it) => {
           const active = it.match(pathname);
