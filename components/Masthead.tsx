@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,6 +10,15 @@ import { ThemeToggle } from "./ThemeToggle";
 export function Masthead() {
   const pathname = usePathname();
   const onPlan = pathname?.startsWith("/plan");
+
+  useEffect(() => {
+    // Ask the browser to treat our localStorage as durable. Most relevant for
+    // installed PWAs (iOS/Android) where storage can otherwise be evicted
+    // under pressure. Idempotent — safe to call every mount.
+    if (typeof navigator !== "undefined" && navigator.storage?.persist) {
+      navigator.storage.persist().catch(() => {});
+    }
+  }, []);
   return (
     <div
       className={`mx-auto flex items-center justify-between gap-3 px-4 pt-4 no-print ${

@@ -4,6 +4,7 @@ import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   Check,
+  Home,
   ListChecks,
   Package,
   RotateCcw,
@@ -107,6 +108,11 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
   const { checks, toggle, reset, loaded } = useLocalChecklist(
     `shopping:week:${current.week}`
   );
+  const {
+    checks: haveChecks,
+    toggle: toggleHave,
+    reset: resetHave,
+  } = useLocalChecklist(`pantryHave:week:${current.week}`);
 
   const mealFilter = useMemo(() => {
     if (current.week === 0) return null;
@@ -145,13 +151,21 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
     () => visibleSections.reduce((n, s) => n + s.items.length, 0),
     [visibleSections]
   );
+  const haveCount = useMemo(() => {
+    let n = 0;
+    for (const { items } of visibleSections) {
+      for (const { id } of items) if (haveChecks[id]) n++;
+    }
+    return n;
+  }, [visibleSections, haveChecks]);
+  const toBuyTotal = totalItems - haveCount;
   const doneCount = useMemo(() => {
     let n = 0;
     for (const { items } of visibleSections) {
-      for (const { id } of items) if (checks[id]) n++;
+      for (const { id } of items) if (checks[id] && !haveChecks[id]) n++;
     }
     return n;
-  }, [visibleSections, checks]);
+  }, [visibleSections, checks, haveChecks]);
 
   const mealsByDay = useMemo(() => {
     if (!mealFilter) return [];
@@ -209,7 +223,10 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
               </button>
             )}
             <button
-              onClick={reset}
+              onClick={() => {
+                reset();
+                resetHave();
+              }}
               className="inline-flex items-center gap-1 rounded-pill border border-mpneutral-200 bg-surface px-3 py-1.5 text-xs font-medium text-mpneutral-400 shadow-card hover:text-primary-400"
             >
               <RotateCcw className="h-3.5 w-3.5" /> Reset
@@ -270,7 +287,12 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
           </div>
           <div className="flex-1">
             <div className="text-sm font-semibold text-mpneutral-400">
-              {doneCount} of {totalItems} items
+              {doneCount} of {toBuyTotal} to buy
+              {haveCount > 0 && (
+                <span className="ml-2 text-xs font-normal text-mpneutral-300">
+                  ({haveCount} already have)
+                </span>
+              )}
               {filterActive && (
                 <span className="ml-2 text-xs font-normal text-mpneutral-300">
                   ({totalMeals - selectedCount} meal
@@ -282,8 +304,8 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
               <div
                 className="h-full rounded-pill bg-gradient-to-r from-primary-300 to-secondary-300 transition-all duration-500"
                 style={{
-                  width: totalItems
-                    ? `${(doneCount / totalItems) * 100}%`
+                  width: toBuyTotal
+                    ? `${(doneCount / toBuyTotal) * 100}%`
                     : "0%",
                 }}
               />
@@ -309,57 +331,83 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
               <ul className="divide-y divide-app-border px-4">
                 {items.map(({ item, id }) => {
                   const checked = !!checks[id];
+                  const have = !!haveChecks[id];
                   const matches = mealFilter?.itemMatches.get(id) || [];
                   return (
                     <li key={id}>
-                      <button
-                        onClick={() => toggle(id)}
-                        className="flex w-full items-center gap-3 py-3 text-left"
+                      <div
+                        className={`flex w-full items-center gap-2 py-3 ${
+                          have ? "opacity-50" : ""
+                        }`}
                       >
-                        <span
-                          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 transition ${
-                            checked
-                              ? "border-primary-300 bg-primary-300 text-white"
-                              : "border-mpneutral-300 bg-background"
-                          }`}
+                        <button
+                          onClick={() => toggle(id)}
+                          disabled={have}
+                          className="flex flex-1 items-center gap-3 text-left disabled:cursor-default"
                         >
-                          {checked && <Check className="h-4 w-4 animate-pop" />}
-                        </span>
-                        <div className="flex-1 min-w-0">
-                          <div
-                            className={`text-sm font-medium transition ${
+                          <span
+                            className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 transition ${
                               checked
-                                ? "text-mpneutral-300 line-through"
-                                : "text-mpneutral-400"
+                                ? "border-primary-300 bg-primary-300 text-white"
+                                : "border-mpneutral-300 bg-background"
                             }`}
                           >
-                            {item.name}
-                            {item.qty && (
-                              <span className="ml-2 text-xs font-normal text-mpneutral-300">
-                                {item.qty}
-                              </span>
+                            {checked && (
+                              <Check className="h-4 w-4 animate-pop" />
+                            )}
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <div
+                              className={`text-sm font-medium transition ${
+                                checked || have
+                                  ? "text-mpneutral-300 line-through"
+                                  : "text-mpneutral-400"
+                              }`}
+                            >
+                              {item.name}
+                              {item.qty && (
+                                <span className="ml-2 text-xs font-normal text-mpneutral-300">
+                                  {item.qty}
+                                </span>
+                              )}
+                            </div>
+                            {matches.length > 0 ? (
+                              <div className="mt-1 flex flex-wrap gap-1">
+                                {matches.map((m) => (
+                                  <span
+                                    key={m.id}
+                                    className="inline-flex items-center rounded-pill bg-primary-100 px-2 py-0.5 text-[10px] font-medium text-primary-400"
+                                  >
+                                    {m.dayName} {m.slotLabel}
+                                  </span>
+                                ))}
+                              </div>
+                            ) : (
+                              item.for && (
+                                <div className="text-xs text-mpneutral-300">
+                                  {item.for}
+                                </div>
+                              )
                             )}
                           </div>
-                          {matches.length > 0 ? (
-                            <div className="mt-1 flex flex-wrap gap-1">
-                              {matches.map((m) => (
-                                <span
-                                  key={m.id}
-                                  className="inline-flex items-center rounded-pill bg-primary-100 px-2 py-0.5 text-[10px] font-medium text-primary-400"
-                                >
-                                  {m.dayName} {m.slotLabel}
-                                </span>
-                              ))}
-                            </div>
-                          ) : (
-                            item.for && (
-                              <div className="text-xs text-mpneutral-300">
-                                {item.for}
-                              </div>
-                            )
-                          )}
-                        </div>
-                      </button>
+                        </button>
+                        <button
+                          onClick={() => toggleHave(id)}
+                          aria-label={
+                            have ? "I don't have this" : "I have this at home"
+                          }
+                          title={
+                            have ? "I don't have this" : "I have this at home"
+                          }
+                          className={`shrink-0 flex h-9 w-9 items-center justify-center rounded-full border transition ${
+                            have
+                              ? "border-secondary-300 bg-secondary-100 text-secondary-400"
+                              : "border-mpneutral-200 bg-background text-mpneutral-300 hover:border-secondary-300 hover:text-secondary-400"
+                          }`}
+                        >
+                          <Home className="h-4 w-4" />
+                        </button>
+                      </div>
                     </li>
                   );
                 })}
