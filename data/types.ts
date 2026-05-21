@@ -1,5 +1,33 @@
 export type RecipeCategory = "dinner" | "soup" | "breakfast" | "lunch" | "snack";
 
+export type IngredientSection =
+  | "Proteins"
+  | "Produce"
+  | "Dairy/Refrigerated"
+  | "Pantry/Dry"
+  | "Bakery"
+  | "Frozen"
+  | "Snacks"
+  | "Other";
+
+export interface IngredientItem {
+  name: string;             // canonical name, e.g., "Ground turkey (93/7)"
+  qty: number;              // numeric quantity per recipe (per default servings)
+  unit: string;             // "lb", "oz", "tsp", "tbsp", "cup", "ea", "clove", "bunch", "head", "can", "jar", etc.
+  section: IngredientSection;
+  pantry?: boolean;         // true = staple, skip on weekly shopping (already on hand)
+  derivedFromBase?: boolean; // true = supplied by a base recipe (IP shredded chicken, pulled pork, pot roast). Skip on shopping aggregation.
+  prep?: string;            // "diced", "minced", "thinly sliced" — display only
+}
+
+export interface RecipeProduces {
+  name: string;             // canonical name of the cooked output, e.g., "Shredded cooked chicken"
+  qty: number;              // cooked qty that the recipe's standalone ingredients yield (e.g., 6 cups)
+  unit: string;             // unit of the cooked output, e.g., "cup"
+  sourceIngredient: string; // exact ingredientItem name to scale when downstream demand exceeds base output (e.g., "Boneless skinless chicken thighs")
+  rawPerCookedQty: number;  // qty of sourceIngredient (in its declared unit) needed per 1 unit of cooked output (e.g., 0.5 lb raw chicken per 1 cup shredded)
+}
+
 export interface Recipe {
   slug: string;
   name: string;
@@ -11,6 +39,8 @@ export interface Recipe {
   cookMin?: number | null;
   tags: string[];
   ingredients: string[];
+  ingredientItems?: IngredientItem[]; // structured, used for shopping aggregation
+  produces?: RecipeProduces;          // for IP/oven base recipes that feed downstream meals
   steps: string[];
   notes?: string | null;
 }

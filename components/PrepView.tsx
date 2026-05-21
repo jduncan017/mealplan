@@ -21,6 +21,12 @@ import {
   selectedStepMeals,
   stepVisibleForSelection,
 } from "@/lib/mealItemMap";
+import {
+  currentMonthKey,
+  localWeekNumber,
+  monthForWeekIndex,
+  monthsInCalendar,
+} from "@/lib/months";
 
 export function PrepView({
   week,
@@ -86,10 +92,45 @@ export function PrepView({
     setSelectedSlugs(new Set(mealFilter.meals.map((r) => r.slug)));
   const clearAllMeals = () => setSelectedSlugs(new Set());
 
+  const months = useMemo(() => monthsInCalendar(calendar), []);
+  const currentMonth = useMemo(
+    () => monthForWeekIndex(week.week, months),
+    [week.week, months]
+  );
+  const initialMonthKey = currentMonth?.key || currentMonthKey(months);
+  const [monthKey, setMonthKey] = useState<string>(initialMonthKey);
+  const month = months.find((m) => m.key === monthKey) || currentMonth;
+
+  useEffect(() => {
+    if (currentMonth && currentMonth.key !== monthKey) {
+      setMonthKey(currentMonth.key);
+    }
+  }, [currentMonth, monthKey]);
+
+  const monthWeeks = useMemo(() => {
+    if (!month) return allWeeks;
+    return allWeeks.filter((w) => month.weekIndexes.includes(w));
+  }, [allWeeks, month]);
+
+  const localWeek = month ? localWeekNumber(week.week, month) : week.week;
+
+  const handleMonthChange = (key: string) => {
+    setMonthKey(key);
+    const m = months.find((x) => x.key === key);
+    if (m && m.weekIndexes.length > 0) {
+      const targetWeek = allWeeks.find((w) =>
+        m.weekIndexes.includes(w)
+      );
+      if (targetWeek !== undefined && targetWeek !== week.week) {
+        window.location.href = `/prep/${targetWeek}`;
+      }
+    }
+  };
+
   return (
     <>
       <PageHeader
-        title={`Week ${week.week} prep`}
+        title={`Week ${localWeek} prep`}
         subtitle={week.dateLabel}
         right={
           <div className="no-print flex items-center gap-2">
@@ -116,20 +157,42 @@ export function PrepView({
         }
       />
 
-      <div className="mb-4 flex items-center gap-2 overflow-x-auto pb-1 no-print">
-        {allWeeks.map((w) => (
-          <Link
-            key={w}
-            href={`/prep/${w}`}
-            className={`shrink-0 rounded-pill px-3.5 py-1.5 text-sm font-semibold transition ${
-              w === week.week
-                ? "bg-tertiary-300 text-white shadow-card"
-                : "bg-surface border border-mpneutral-200 text-mpneutral-400 hover:border-tertiary-200"
-            }`}
+      {months.length > 1 && (
+        <div className="mb-3 flex items-center gap-2 no-print">
+          <label className="text-xs font-semibold uppercase tracking-wider text-mpneutral-300">
+            Month
+          </label>
+          <select
+            value={monthKey}
+            onChange={(e) => handleMonthChange(e.target.value)}
+            className="rounded-pill border border-mpneutral-200 bg-surface px-3 py-1.5 text-sm font-medium text-mpneutral-400 shadow-card"
           >
-            Week {w}
-          </Link>
-        ))}
+            {months.map((m) => (
+              <option key={m.key} value={m.key}>
+                {m.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+
+      <div className="mb-4 flex items-center gap-2 overflow-x-auto pb-1 no-print">
+        {monthWeeks.map((w) => {
+          const num = month ? localWeekNumber(w, month) : w;
+          return (
+            <Link
+              key={w}
+              href={`/prep/${w}`}
+              className={`shrink-0 rounded-pill px-3.5 py-1.5 text-sm font-semibold transition ${
+                w === week.week
+                  ? "bg-tertiary-300 text-white shadow-card"
+                  : "bg-surface border border-mpneutral-200 text-mpneutral-400 hover:border-tertiary-200"
+              }`}
+            >
+              Week {num}
+            </Link>
+          );
+        })}
       </div>
 
       {loaded && (
@@ -216,7 +279,7 @@ export function PrepView({
           href={`/shopping?week=${week.week}`}
           className="flex items-center justify-center gap-2 rounded-card bg-primary-300 py-3 text-sm font-semibold text-white shadow-card transition hover:-translate-y-0.5 hover:shadow-lift"
         >
-          <ShoppingCart className="h-4 w-4" /> Week {week.week} shopping list
+          <ShoppingCart className="h-4 w-4" /> Week {localWeek} shopping list
         </Link>
       </div>
 

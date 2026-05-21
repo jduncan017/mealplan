@@ -21,6 +21,16 @@ import {
   itemVisibleForSelection,
   type MealEntry,
 } from "@/lib/mealItemMap";
+import {
+  currentMonthKey,
+  localWeekNumber,
+  monthForWeekIndex,
+  monthsInCalendar,
+} from "@/lib/months";
+import {
+  canDeriveWeek,
+  deriveShoppingWeek,
+} from "@/lib/shoppingFromRecipes";
 
 export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
   const params = useSearchParams();
@@ -28,10 +38,28 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
   const qsWeek = qsParam !== null ? Number(qsParam) : NaN;
   const hasQs = qsParam !== null && weeks.some((w) => w.week === qsWeek);
   const todayWeek = calendar.find((d) => d.date === todayISO())?.weekIndex;
-  const firstReal = weeks.find((w) => w.week > 0)?.week || 1;
+
+  const months = useMemo(() => monthsInCalendar(calendar), []);
+  const initialMonthKey = useMemo(() => {
+    if (hasQs) {
+      const m = monthForWeekIndex(qsWeek, months);
+      if (m) return m.key;
+    }
+    if (todayWeek) {
+      const m = monthForWeekIndex(todayWeek, months);
+      if (m) return m.key;
+    }
+    return currentMonthKey(months);
+  }, [hasQs, qsWeek, todayWeek, months]);
+
+  const [monthKey, setMonthKey] = useState<string>(initialMonthKey);
+  const month = months.find((m) => m.key === monthKey) || months[0];
+
+  const firstRealInMonth = month?.weekIndexes[0] || 1;
   const initial = hasQs
     ? qsWeek
-    : (todayWeek && weeks.find((w) => w.week === todayWeek)?.week) || firstReal;
+    : (todayWeek && month?.weekIndexes.includes(todayWeek) && todayWeek) ||
+      firstRealInMonth;
 
   const [week, setWeek] = useState<number>(initial);
 
@@ -39,7 +67,43 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
     if (hasQs) setWeek(qsWeek);
   }, [hasQs, qsWeek]);
 
-  const current = weeks.find((w) => w.week === week) || weeks[0];
+  useEffect(() => {
+    if (!month) return;
+    if (week === 0) return;
+    if (!month.weekIndexes.includes(week)) {
+      setWeek(month.weekIndexes[0]);
+    }
+  }, [month, week]);
+
+  const effectiveWeeks = useMemo(() => {
+    // For each non-wholesale week in this month, prefer derived shopping
+    // (from recipe ingredientItems aggregated across the week's meals) when
+    // every used recipe has structured items. Otherwise fall back to the
+    // hand-authored ShoppingWeek entry.
+    if (!month) return weeks;
+    const next = [...weeks];
+    for (const idx of month.weekIndexes) {
+      if (idx === 0) continue;
+      if (!canDeriveWeek(idx, calendar, recipes)) continue;
+      const existing = next.find((w) => w.week === idx);
+      const dateLabel = existing?.dateLabel || `Week ${idx}`;
+      const derived = deriveShoppingWeek(idx, calendar, recipes, dateLabel);
+      const i = next.findIndex((w) => w.week === idx);
+      if (i >= 0) next[i] = derived;
+      else next.push(derived);
+    }
+    return next;
+  }, [weeks, month]);
+
+  const visibleWeeks = useMemo(() => {
+    const wholesale = effectiveWeeks.find((w) => w.week === 0);
+    const monthly = month
+      ? effectiveWeeks.filter((w) => month.weekIndexes.includes(w.week))
+      : [];
+    return wholesale ? [wholesale, ...monthly] : monthly;
+  }, [effectiveWeeks, month]);
+
+  const current = effectiveWeeks.find((w) => w.week === week) || effectiveWeeks[0];
   const { checks, toggle, reset, loaded } = useLocalChecklist(
     `shopping:week:${current.week}`
   );
@@ -154,10 +218,30 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
         }
       />
 
+      {months.length > 1 && (
+        <div className="mb-3 flex items-center gap-2 no-print">
+          <label className="text-xs font-semibold uppercase tracking-wider text-mpneutral-300">
+            Month
+          </label>
+          <select
+            value={monthKey}
+            onChange={(e) => setMonthKey(e.target.value)}
+            className="rounded-pill border border-mpneutral-200 bg-surface px-3 py-1.5 text-sm font-medium text-mpneutral-400 shadow-card"
+          >
+            {months.map((m) => (
+              <option key={m.key} value={m.key}>
+                {m.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+
       <div className="mb-4 flex items-center gap-2 overflow-x-auto pb-1 no-print">
-        {weeks.map((w) => {
+        {visibleWeeks.map((w) => {
           const isWholesale = w.week === 0;
           const active = w.week === current.week;
+          const localNum = month ? localWeekNumber(w.week, month) : w.week;
           return (
             <button
               key={w.week}
@@ -173,7 +257,7 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
               }`}
             >
               {isWholesale && <Package className="h-3.5 w-3.5" />}
-              {isWholesale ? "Wholesale" : `Week ${w.week}`}
+              {isWholesale ? "Wholesale" : `Week ${localNum}`}
             </button>
           );
         })}

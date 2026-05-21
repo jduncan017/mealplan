@@ -156,5 +156,140 @@ export const prep: PrepWeek[] = [
         "approx": "10 min"
       }
     ]
+  },
+  {
+    "week": 6,
+    "dateLabel": "Sun May 31 — covers Jun 1-4 before travel",
+    "steps": [
+      {
+        "label": "Step 1",
+        "action": "Bake a batch of Veggie Egg Muffins (12 muffins) at 375F for 22 min. Covers Mon + Wed breakfasts.",
+        "approx": "30 min"
+      },
+      {
+        "label": "Step 2",
+        "action": "Assemble 4 jars of Protein Overnight Oats (PB + banana + berries + chia + protein powder). Shake and fridge.",
+        "approx": "10 min"
+      },
+      {
+        "label": "Step 3",
+        "action": "Assemble 4 jars of Greek Yogurt Parfait (yogurt + granola + berries in layers). Fridge for Thu and snack backups.",
+        "approx": "10 min"
+      },
+      {
+        "label": "Step 4",
+        "action": "Hard boil 8 eggs for snacks across the week (Hard boiled eggs).",
+        "approx": "15 min"
+      },
+      {
+        "label": "Step 5",
+        "action": "Assemble 4 Power Protein Smoothie freezer packs (banana, berries, spinach, PB portioned into freezer bags) to grab when you return from travel for Week 7.",
+        "approx": "15 min"
+      }
+    ]
+  },
+  {
+    "week": 7,
+    "dateLabel": "Tue Jun 9 evening — quick post-travel reset",
+    "steps": [
+      {
+        "label": "Step 1",
+        "action": "Bake a fresh batch of Veggie Egg Muffins (12 muffins) at 375F for 22 min. Covers Fri breakfast and snack backups.",
+        "approx": "30 min"
+      },
+      {
+        "label": "Step 2",
+        "action": "Assemble 2 jars of Greek Yogurt Parfait for Thu breakfast.",
+        "approx": "5 min"
+      },
+      {
+        "label": "Step 3",
+        "action": "Hard boil 6 eggs for snacks (Hard boiled eggs).",
+        "approx": "15 min"
+      }
+    ]
+  },
+  {
+    "week": 8,
+    "dateLabel": "Sun Jun 14",
+    "steps": [
+      {
+        "label": "Step 1",
+        "action": "Instant Pot Mississippi Pot Roast: sear chuck roast, add pepperoncini, butter, ranch + au jus packets, broth. Pressure cook 70 min + 15 min natural release. Shred when done. Serve tonight for Mississippi Pot Roast. Save 3 cups shredded beef in the fridge for Mon Beef Barbacoa Tacos.",
+        "approx": "100 min"
+      },
+      {
+        "label": "Step 2",
+        "action": "Bake a batch of Veggie Egg Muffins (12 muffins) at 375F for 22 min. Covers Tue breakfast.",
+        "approx": "30 min"
+      },
+      {
+        "label": "Step 3",
+        "action": "Assemble 3 jars of Protein Overnight Oats (PB + banana + berries + chia + protein powder).",
+        "approx": "10 min"
+      },
+      {
+        "label": "Step 4",
+        "action": "Assemble 2 jars of Greek Yogurt Parfait for Thu breakfast.",
+        "approx": "5 min"
+      },
+      {
+        "label": "Step 5",
+        "action": "Make 8 Make-Ahead Breakfast Burritos and wrap individually. Eat 1 Fri morning, freeze the rest as Week 9 + travel-return safety net.",
+        "approx": "45 min"
+      },
+      {
+        "label": "Step 6",
+        "action": "Hard boil 6 eggs for snacks (Hard boiled eggs).",
+        "approx": "15 min"
+      }
+    ]
+  },
+  {
+    "week": 9,
+    "dateLabel": "Sun Jun 21 — Emily solo until Tue",
+    "steps": [
+      {
+        "label": "Step 1",
+        "action": "Instant Pot shredded chicken (big batch): sauté onion + garlic + cumin + chili powder + smoked paprika, add chicken thighs, broth, lime juice. Pressure cook 15 min + 10 min natural release. Shred. Use 2 cups tonight for Shredded Chicken Street Tacos. Save 2.5 cups for Mon Chicken Enchilada Skillet. Save 1.5 cups plain for Wed Mediterranean Chicken Wrap. Save 2 cups for Wed Buffalo Chicken Stuffed Sweet Potatoes (toss with buffalo sauce when ready to bake). Save 1.5 cups for Thu Buffalo Chicken Wrap (toss with buffalo sauce in a jar).",
+        "approx": "50 min"
+      },
+      {
+        "label": "Step 2",
+        "action": "Bake a batch of Veggie Egg Muffins (12 muffins) at 375F for 22 min. Covers Tue breakfast.",
+        "approx": "30 min"
+      },
+      {
+        "label": "Step 3",
+        "action": "Assemble 3 jars of Protein Overnight Oats.",
+        "approx": "10 min"
+      },
+      {
+        "label": "Step 4",
+        "action": "Assemble 1 jar of Greek Yogurt Parfait for Thu breakfast.",
+        "approx": "5 min"
+      },
+      {
+        "label": "Step 5",
+        "action": "Hard boil 6 eggs for snacks (Hard boiled eggs).",
+        "approx": "15 min"
+      }
+    ]
+  },
+  {
+    "week": 10,
+    "dateLabel": "Mon Jun 29 — back from travel, 2-day mini week",
+    "steps": [
+      {
+        "label": "Step 1",
+        "action": "Grocery restock: pick up ground turkey, salmon, fresh produce on the way back from travel. No formal prep needed for this 2-day mini week.",
+        "approx": "30 min"
+      },
+      {
+        "label": "Step 2",
+        "action": "Assemble 2 jars of Greek Yogurt Parfait for Tue breakfast.",
+        "approx": "5 min"
+      }
+    ]
   }
 ];

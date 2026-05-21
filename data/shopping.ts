@@ -1680,9 +1680,9 @@ export const shopping: ShoppingWeek[] = [
             "for": "White bean soup"
           },
           {
-            "name": "Ground turkey",
-            "qty": "1.25 lb",
-            "for": "Wed taco skillet"
+            "name": "Beef sirloin (or top round), sliced thin",
+            "qty": "1.5 lb",
+            "for": "Wed Beef Stroganoff"
           },
           {
             "name": "Chicken breast",
@@ -1795,6 +1795,11 @@ export const shopping: ShoppingWeek[] = [
             "for": "Bowls"
           },
           {
+            "name": "Cremini or button mushrooms",
+            "qty": "1 lb",
+            "for": "Beef Stroganoff"
+          },
+          {
             "name": "Cucumber",
             "qty": "2",
             "for": ""
@@ -1870,19 +1875,24 @@ export const shopping: ShoppingWeek[] = [
             "for": ""
           },
           {
-            "name": "Shredded cheddar",
-            "qty": "8 oz",
-            "for": "Taco skillet Wed"
-          },
-          {
             "name": "Queso fresco (pasteurized)",
             "qty": "4 oz",
             "for": "Carnitas bowl topping"
           },
           {
-            "name": "Sour cream",
-            "qty": "8 oz",
-            "for": "Fajitas Thu + skillet Wed"
+            "name": "Sour cream (full fat)",
+            "qty": "16 oz",
+            "for": "Beef Stroganoff (1 cup) + Fajitas Thu"
+          },
+          {
+            "name": "Egg noodles",
+            "qty": "12 oz",
+            "for": "Beef Stroganoff"
+          },
+          {
+            "name": "Beef broth (low-sodium)",
+            "qty": "32 oz",
+            "for": "Beef Stroganoff"
           },
           {
             "name": "Butter",
@@ -2073,6 +2083,1171 @@ export const shopping: ShoppingWeek[] = [
             "name": "Frozen berries",
             "qty": "restock",
             "for": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 6,
+    "dateLabel": "Mon Jun 1 - Sat Jun 6 (Mon-Thu eating, Fri-Sat travel)",
+    "sections": [
+      {
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Salmon fillets (6 oz each)",
+            "qty": "4",
+            "for": "Sheet Pan Salmon with Lemon Asparagus and Potatoes"
+          },
+          {
+            "name": "Ground turkey (93/7)",
+            "qty": "3 lb",
+            "for": "Asian Turkey Lettuce Wraps + Turkey Burgers with Avocado and Slaw"
+          },
+          {
+            "name": "Chicken breast",
+            "qty": "1.5 lb",
+            "for": "Sheet Pan Chicken Fajitas"
+          },
+          {
+            "name": "Bacon",
+            "qty": "8 oz",
+            "for": "Mason Jar Cobb Salad"
+          }
+        ]
+      },
+      {
+        "name": "Produce",
+        "items": [
+          {
+            "name": "Butter lettuce heads",
+            "qty": "2",
+            "for": "Asian Turkey Lettuce Wraps"
+          },
+          {
+            "name": "Mixed salad greens",
+            "qty": "10 oz clamshell",
+            "for": "Mason Jar Cobb Salad"
+          },
+          {
+            "name": "Red bell peppers",
+            "qty": "4",
+            "for": "Lettuce wraps + fajitas"
+          },
+          {
+            "name": "Yellow bell peppers",
+            "qty": "2",
+            "for": "Fajitas"
+          },
+          {
+            "name": "Yellow onions",
+            "qty": "3",
+            "for": "Lettuce wraps + fajitas + burgers"
+          },
+          {
+            "name": "Asparagus",
+            "qty": "1 lb",
+            "for": "Sheet Pan Salmon"
+          },
+          {
+            "name": "Baby potatoes",
+            "qty": "1.5 lb",
+            "for": "Sheet Pan Salmon"
+          },
+          {
+            "name": "Lemons",
+            "qty": "3",
+            "for": "Salmon + fajitas"
+          },
+          {
+            "name": "Limes",
+            "qty": "3",
+            "for": "Fajitas + lettuce wraps"
+          },
+          {
+            "name": "Fresh ginger root",
+            "qty": "1 large knob (3-inch)",
+            "for": "Lettuce wraps"
+          },
+          {
+            "name": "Garlic head",
+            "qty": "1",
+            "for": ""
+          },
+          {
+            "name": "Green onions",
+            "qty": "1 bunch",
+            "for": "Lettuce wraps"
+          },
+          {
+            "name": "Cilantro",
+            "qty": "1 bunch",
+            "for": "Fajitas"
+          },
+          {
+            "name": "Avocados",
+            "qty": "4",
+            "for": "Burgers + Cobb"
+          },
+          {
+            "name": "Tomatoes (vine or beefsteak)",
+            "qty": "3",
+            "for": "Burgers + Cobb"
+          },
+          {
+            "name": "Green cabbage (or coleslaw mix)",
+            "qty": "1 small head or 14 oz mix",
+            "for": "Burger slaw"
+          },
+          {
+            "name": "Carrots",
+            "qty": "1 lb",
+            "for": "Burger slaw + snacks"
+          },
+          {
+            "name": "Water chestnuts (canned)",
+            "qty": "1 can (8 oz)",
+            "for": "Lettuce wraps"
+          },
+          {
+            "name": "Berries (strawberries or blueberries)",
+            "qty": "2 pints",
+            "for": "Parfait + oats + snacks"
+          },
+          {
+            "name": "Bananas",
+            "qty": "5",
+            "for": "Smoothie packs + oats + snacks"
+          },
+          {
+            "name": "Baby spinach",
+            "qty": "5 oz",
+            "for": "Smoothie packs + egg muffins"
+          }
+        ]
+      },
+      {
+        "name": "Dairy / Refrigerated",
+        "items": [
+          {
+            "name": "Plain Greek yogurt (full fat)",
+            "qty": "32 oz",
+            "for": "Parfaits + snacks"
+          },
+          {
+            "name": "Cottage cheese (full fat)",
+            "qty": "16 oz",
+            "for": "Snacks"
+          },
+          {
+            "name": "Eggs",
+            "qty": "18 (1.5 dozen)",
+            "for": "Egg muffins + hard boiled + burgers"
+          },
+          {
+            "name": "Pasteurized pepper jack or cheddar slices",
+            "qty": "8 slices",
+            "for": "Burgers"
+          },
+          {
+            "name": "Pasteurized blue cheese crumbles",
+            "qty": "4 oz",
+            "for": "Cobb salad"
+          },
+          {
+            "name": "Brioche or potato buns",
+            "qty": "4 (pack)",
+            "for": "Burgers"
+          },
+          {
+            "name": "Diced ham or turkey sausage",
+            "qty": "8 oz",
+            "for": "Egg muffins"
+          }
+        ]
+      },
+      {
+        "name": "Pantry / Asian condiments (if not already on hand)",
+        "items": [
+          {
+            "name": "Hoisin sauce",
+            "qty": "1 small jar",
+            "for": "Lettuce wraps"
+          },
+          {
+            "name": "Roasted cashews",
+            "qty": "8 oz",
+            "for": "Lettuce wraps + snacks"
+          },
+          {
+            "name": "Panko breadcrumbs",
+            "qty": "1 small box",
+            "for": "Turkey Burgers"
+          },
+          {
+            "name": "Mayonnaise",
+            "qty": "1 jar",
+            "for": "Slaw + sandwiches"
+          },
+          {
+            "name": "Dijon mustard",
+            "qty": "1 small jar",
+            "for": "Slaw + burgers"
+          },
+          {
+            "name": "Celery seed",
+            "qty": "1 small jar",
+            "for": "Slaw"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 7,
+    "dateLabel": "Sun Jun 7 - Sat Jun 13 (return Tue Jun 9, eating Tue-Sat)",
+    "sections": [
+      {
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Salmon fillets (6 oz each)",
+            "qty": "4",
+            "for": "Sheet Pan Honey-Soy Salmon (Tue)"
+          },
+          {
+            "name": "Bone-in skin-on chicken thighs",
+            "qty": "8",
+            "for": "Greek Chicken Thighs with Lemon Potatoes (Sat)"
+          },
+          {
+            "name": "Ground beef (90/10)",
+            "qty": "1.5 lb",
+            "for": "Korean Beef Bowls"
+          },
+          {
+            "name": "Large shrimp (peeled, deveined, 16/20)",
+            "qty": "2.5 lb",
+            "for": "Shrimp and Sausage Skillet + Grilled Shrimp Tacos"
+          },
+          {
+            "name": "Andouille or smoked sausage",
+            "qty": "12 oz",
+            "for": "Shrimp and Sausage Skillet"
+          },
+          {
+            "name": "Chicken breast (or rotisserie)",
+            "qty": "1.5 lb",
+            "for": "Asian Sesame Chicken Salad"
+          }
+        ]
+      },
+      {
+        "name": "Produce",
+        "items": [
+          {
+            "name": "Napa cabbage",
+            "qty": "1 head",
+            "for": "Sesame chicken salad"
+          },
+          {
+            "name": "Red cabbage",
+            "qty": "1 small head",
+            "for": "Sesame salad + shrimp taco slaw"
+          },
+          {
+            "name": "Carrots",
+            "qty": "1.5 lb",
+            "for": "Sesame salad + Korean bowls + snacks"
+          },
+          {
+            "name": "Snow peas",
+            "qty": "1 cup (6 oz)",
+            "for": "Sesame salad"
+          },
+          {
+            "name": "Sugar snap peas",
+            "qty": "1 lb",
+            "for": "Honey-soy salmon"
+          },
+          {
+            "name": "Broccoli florets",
+            "qty": "1 lb",
+            "for": "Honey-soy salmon"
+          },
+          {
+            "name": "Red bell peppers",
+            "qty": "4",
+            "for": "Salmon + skillet + salad"
+          },
+          {
+            "name": "Yellow onion",
+            "qty": "2",
+            "for": "Skillet + Korean bowls"
+          },
+          {
+            "name": "Garlic head",
+            "qty": "1",
+            "for": ""
+          },
+          {
+            "name": "Fresh ginger root",
+            "qty": "1 knob",
+            "for": "Salmon + bowls + dressing"
+          },
+          {
+            "name": "Mangoes (ripe)",
+            "qty": "3",
+            "for": "Shrimp tacos mango salsa"
+          },
+          {
+            "name": "Jalapeños",
+            "qty": "2",
+            "for": "Mango salsa"
+          },
+          {
+            "name": "Cilantro",
+            "qty": "2 bunches",
+            "for": "Salsa + Korean bowls + Cobb"
+          },
+          {
+            "name": "Limes",
+            "qty": "5",
+            "for": "Salsa + bowls"
+          },
+          {
+            "name": "Lemons",
+            "qty": "5",
+            "for": "Greek chicken (Sat)"
+          },
+          {
+            "name": "Baby gold potatoes",
+            "qty": "1.5 lb",
+            "for": "Greek Chicken with Lemon Potatoes"
+          },
+          {
+            "name": "Fresh parsley",
+            "qty": "1 small bunch",
+            "for": "Greek chicken garnish"
+          },
+          {
+            "name": "Avocados",
+            "qty": "4",
+            "for": "Shrimp tacos + Cobb"
+          },
+          {
+            "name": "English cucumber",
+            "qty": "2",
+            "for": "Korean bowls + snacks"
+          },
+          {
+            "name": "Baby spinach",
+            "qty": "5 oz",
+            "for": "Korean bowls + smoothies"
+          },
+          {
+            "name": "Green cabbage",
+            "qty": "1 small head",
+            "for": "Shrimp taco slaw"
+          },
+          {
+            "name": "Red onion",
+            "qty": "2",
+            "for": "Mango salsa + Cobb"
+          },
+          {
+            "name": "Mixed salad greens",
+            "qty": "10 oz clamshell",
+            "for": "Cobb"
+          },
+          {
+            "name": "Berries",
+            "qty": "1 pint",
+            "for": "Parfaits"
+          },
+          {
+            "name": "Bananas",
+            "qty": "4",
+            "for": "Smoothies + snacks"
+          },
+          {
+            "name": "Shelled edamame (fresh or frozen-thawed)",
+            "qty": "12 oz",
+            "for": "Sesame salad"
+          },
+          {
+            "name": "Cherry tomatoes",
+            "qty": "1 pint",
+            "for": "Shrimp and sausage skillet"
+          }
+        ]
+      },
+      {
+        "name": "Dairy / Refrigerated",
+        "items": [
+          {
+            "name": "Eggs",
+            "qty": "1 dozen",
+            "for": "Korean bowls + egg muffins + hard boiled"
+          },
+          {
+            "name": "Plain Greek yogurt",
+            "qty": "16 oz",
+            "for": "Parfaits"
+          },
+          {
+            "name": "Cottage cheese (full fat)",
+            "qty": "16 oz",
+            "for": "Toast + snacks"
+          },
+          {
+            "name": "Pasteurized cotija or queso fresco",
+            "qty": "6 oz",
+            "for": "Shrimp tacos"
+          },
+          {
+            "name": "Pasteurized feta",
+            "qty": "4 oz",
+            "for": "Greek chicken topping"
+          },
+          {
+            "name": "Kalamata olives (pitted)",
+            "qty": "1 small jar",
+            "for": "Greek chicken topping"
+          },
+          {
+            "name": "Pasteurized blue cheese crumbles",
+            "qty": "4 oz",
+            "for": "Cobb"
+          },
+          {
+            "name": "Sourdough or whole grain bread",
+            "qty": "1 loaf",
+            "for": "Cottage cheese toast"
+          },
+          {
+            "name": "Bacon",
+            "qty": "8 oz",
+            "for": "Cobb"
+          },
+          {
+            "name": "Pasteurized kimchi",
+            "qty": "1 jar (optional)",
+            "for": "Korean bowls"
+          }
+        ]
+      },
+      {
+        "name": "Pantry",
+        "items": [
+          {
+            "name": "Corn tortillas (small)",
+            "qty": "1 pack (24)",
+            "for": "Shrimp tacos"
+          },
+          {
+            "name": "Jasmine rice",
+            "qty": "restock if low",
+            "for": "Salmon + Korean bowls"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 8,
+    "dateLabel": "Sun Jun 14 - Sat Jun 20 (full week, Emily solo Fri-Sun)",
+    "sections": [
+      {
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Boneless chuck roast",
+            "qty": "3.5 lb",
+            "for": "Mississippi Pot Roast (feeds Sun dinner + Mon Beef Barbacoa Tacos)"
+          },
+          {
+            "name": "Salmon fillets (6 oz each)",
+            "qty": "4",
+            "for": "Miso Glazed Salmon (Tue)"
+          },
+          {
+            "name": "Ground turkey (93/7)",
+            "qty": "1.5 lb",
+            "for": "Stuffed Peppers with Turkey and Quinoa (Wed)"
+          },
+          {
+            "name": "Boneless skinless chicken thighs",
+            "qty": "1.5 lb",
+            "for": "Thai Basil Chicken (Thu)"
+          },
+          {
+            "name": "Ground beef (85/15)",
+            "qty": "1.5 lb",
+            "for": "Beef Burgers with Caramelized Onions (Fri)"
+          },
+          {
+            "name": "Cooked chicken (rotisserie or grilled)",
+            "qty": "3 cups",
+            "for": "Sun Asian Sesame Chicken Salad"
+          },
+          {
+            "name": "Italian wedding soup mini meatballs",
+            "qty": "12 oz (pre-made or homemade)",
+            "for": "Italian Wedding Soup (Sat)"
+          }
+        ]
+      },
+      {
+        "name": "Produce",
+        "items": [
+          {
+            "name": "Pepperoncini peppers (jarred)",
+            "qty": "1 jar (16 oz)",
+            "for": "Mississippi Pot Roast"
+          },
+          {
+            "name": "Yukon Gold potatoes",
+            "qty": "3 lb",
+            "for": "Pot roast mash"
+          },
+          {
+            "name": "Carrots",
+            "qty": "2 lb",
+            "for": "Sesame salad + snacks"
+          },
+          {
+            "name": "Yellow onions",
+            "qty": "5",
+            "for": "Pot roast + barbacoa + stuffed peppers + caramelized onions for burgers"
+          },
+          {
+            "name": "Limes",
+            "qty": "3",
+            "for": "Barbacoa tacos + Thai garnish"
+          },
+          {
+            "name": "Garlic head",
+            "qty": "2",
+            "for": "Pot roast + barbacoa + Thai basil + miso glaze"
+          },
+          {
+            "name": "Fresh ginger root",
+            "qty": "1 knob",
+            "for": "Miso salmon"
+          },
+          {
+            "name": "Baby bok choy",
+            "qty": "1 lb",
+            "for": "Miso Glazed Salmon side"
+          },
+          {
+            "name": "Shiitake mushrooms",
+            "qty": "8 oz",
+            "for": "Miso Glazed Salmon side"
+          },
+          {
+            "name": "Bell peppers (large, mixed colors)",
+            "qty": "6",
+            "for": "Stuffed peppers (5) + Thai basil chicken (1)"
+          },
+          {
+            "name": "Thai red chilies",
+            "qty": "4 (or 2 jalapeños)",
+            "for": "Thai Basil Chicken"
+          },
+          {
+            "name": "Shallot",
+            "qty": "2",
+            "for": "Thai basil + caramelized onions backup"
+          },
+          {
+            "name": "Thai basil",
+            "qty": "1 large bunch (~1.5 cups leaves)",
+            "for": "Thai Basil Chicken"
+          },
+          {
+            "name": "English cucumber",
+            "qty": "2",
+            "for": "Thai garnish + Cobb + snacks"
+          },
+          {
+            "name": "Napa cabbage",
+            "qty": "1 head",
+            "for": "Sesame salad"
+          },
+          {
+            "name": "Red cabbage",
+            "qty": "1 small head",
+            "for": "Sesame salad"
+          },
+          {
+            "name": "Snow peas",
+            "qty": "1 cup",
+            "for": "Sesame salad"
+          },
+          {
+            "name": "Cilantro",
+            "qty": "2 bunches",
+            "for": "Barbacoa + sesame"
+          },
+          {
+            "name": "Avocados",
+            "qty": "5",
+            "for": "Barbacoa + Cobb + quinoa bowl"
+          },
+          {
+            "name": "Tomatoes",
+            "qty": "3",
+            "for": "Burgers + Cobb"
+          },
+          {
+            "name": "Mixed salad greens",
+            "qty": "10 oz clamshell",
+            "for": "Cobb"
+          },
+          {
+            "name": "Curly kale or escarole",
+            "qty": "1 bunch",
+            "for": "Italian Wedding Soup"
+          },
+          {
+            "name": "Berries",
+            "qty": "2 pints",
+            "for": "Parfaits + oats + pancakes"
+          },
+          {
+            "name": "Bananas",
+            "qty": "5",
+            "for": "Oats + smoothies + snacks"
+          },
+          {
+            "name": "Baby spinach",
+            "qty": "10 oz",
+            "for": "Egg muffins + smoothies + quinoa bowl"
+          },
+          {
+            "name": "Shelled edamame",
+            "qty": "8 oz",
+            "for": "Sesame salad + quinoa bowl"
+          },
+          {
+            "name": "Frozen corn",
+            "qty": "1 bag (16 oz)",
+            "for": "Quinoa bowl + stuffed peppers"
+          },
+          {
+            "name": "Red onion",
+            "qty": "1",
+            "for": "Cobb + sesame + quinoa bowl"
+          },
+          {
+            "name": "Butter lettuce",
+            "qty": "1 head",
+            "for": "Beef burgers"
+          }
+        ]
+      },
+      {
+        "name": "Dairy / Refrigerated",
+        "items": [
+          {
+            "name": "Unsalted butter",
+            "qty": "1 stick + extra",
+            "for": "Mississippi Pot Roast + caramelized onions"
+          },
+          {
+            "name": "Ranch dressing seasoning packet",
+            "qty": "1",
+            "for": "Mississippi Pot Roast"
+          },
+          {
+            "name": "Au jus gravy packet",
+            "qty": "1",
+            "for": "Mississippi Pot Roast"
+          },
+          {
+            "name": "Eggs",
+            "qty": "1.5 dozen",
+            "for": "Egg muffins + burritos + hard boiled + Thai fried eggs + burger binder"
+          },
+          {
+            "name": "Plain Greek yogurt",
+            "qty": "16 oz",
+            "for": "Parfaits"
+          },
+          {
+            "name": "Cottage cheese",
+            "qty": "16 oz",
+            "for": "Toast + snacks"
+          },
+          {
+            "name": "Whole milk",
+            "qty": "1/2 gallon",
+            "for": "Smoothies + pancakes"
+          },
+          {
+            "name": "Pasteurized aged cheddar or gruyere slices",
+            "qty": "4 slices",
+            "for": "Beef burgers"
+          },
+          {
+            "name": "Pasteurized blue cheese crumbles",
+            "qty": "4 oz",
+            "for": "Cobb"
+          },
+          {
+            "name": "Shredded Monterey Jack or mozzarella",
+            "qty": "8 oz",
+            "for": "Burritos + stuffed peppers topping"
+          },
+          {
+            "name": "Flour tortillas (large, no whole wheat per preference)",
+            "qty": "6",
+            "for": "Burritos"
+          },
+          {
+            "name": "Brioche or potato buns",
+            "qty": "4",
+            "for": "Beef burgers"
+          },
+          {
+            "name": "Bacon",
+            "qty": "8 oz",
+            "for": "Cobb"
+          },
+          {
+            "name": "Sourdough bread",
+            "qty": "1 loaf",
+            "for": "Cottage cheese toast"
+          },
+          {
+            "name": "Diced ham or turkey sausage",
+            "qty": "8 oz",
+            "for": "Egg muffins + burritos"
+          },
+          {
+            "name": "White miso paste",
+            "qty": "1 small tub",
+            "for": "Miso Glazed Salmon"
+          },
+          {
+            "name": "Mirin",
+            "qty": "1 small bottle",
+            "for": "Miso glaze"
+          },
+          {
+            "name": "Oyster sauce",
+            "qty": "1 small bottle",
+            "for": "Thai Basil Chicken"
+          },
+          {
+            "name": "Fish sauce",
+            "qty": "1 small bottle",
+            "for": "Thai Basil Chicken"
+          },
+          {
+            "name": "Pickles",
+            "qty": "1 jar",
+            "for": "Beef burgers"
+          },
+          {
+            "name": "Worcestershire sauce",
+            "qty": "1 small bottle",
+            "for": "Beef burgers"
+          },
+          {
+            "name": "Balsamic vinegar",
+            "qty": "1 small bottle",
+            "for": "Caramelized onions"
+          }
+        ]
+      },
+      {
+        "name": "Pantry",
+        "items": [
+          {
+            "name": "Small corn tortillas",
+            "qty": "12",
+            "for": "Beef barbacoa tacos"
+          },
+          {
+            "name": "Diced tomatoes (canned)",
+            "qty": "1 can (15 oz)",
+            "for": "Stuffed peppers filling"
+          },
+          {
+            "name": "Tomato sauce (canned)",
+            "qty": "1 small can (8 oz)",
+            "for": "Stuffed peppers"
+          },
+          {
+            "name": "Black beans",
+            "qty": "1 can (15 oz)",
+            "for": "Southwest Quinoa Power Bowl"
+          },
+          {
+            "name": "Pancake mix or flour",
+            "qty": "as needed",
+            "for": "Sheet pan pancakes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 9,
+    "dateLabel": "Sun Jun 21 - Sat Jun 27 (Sun-Thu eating, Fri-Sat travel)",
+    "sections": [
+      {
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Boneless skinless chicken thighs",
+            "qty": "5 lb",
+            "for": "Instant Pot shredded chicken (tacos Sun + enchilada Mon + buffalo sweet potatoes Wed + med wrap Wed lunch + buffalo wrap Thu lunch)"
+          },
+          {
+            "name": "Ground turkey (93/7)",
+            "qty": "1.25 lb",
+            "for": "Ground Turkey Taco Skillet (Tue)"
+          }
+        ]
+      },
+      {
+        "name": "Produce",
+        "items": [
+          {
+            "name": "Yellow onions",
+            "qty": "3",
+            "for": "IP chicken + enchilada + taco skillet"
+          },
+          {
+            "name": "Red bell peppers",
+            "qty": "4",
+            "for": "Enchilada + taco skillet + sesame salad"
+          },
+          {
+            "name": "Sweet potatoes (large)",
+            "qty": "4",
+            "for": "Buffalo Chicken Stuffed Sweet Potatoes"
+          },
+          {
+            "name": "Celery",
+            "qty": "1 small bunch",
+            "for": "Buffalo sweet potatoes topping"
+          },
+          {
+            "name": "Limes",
+            "qty": "4",
+            "for": "Tacos + taco skillet"
+          },
+          {
+            "name": "Lemons",
+            "qty": "2",
+            "for": "Red lentil soup"
+          },
+          {
+            "name": "Cilantro",
+            "qty": "2 bunches",
+            "for": "Tacos + skillet + salad"
+          },
+          {
+            "name": "Avocados",
+            "qty": "4",
+            "for": "Tacos + wraps"
+          },
+          {
+            "name": "Roma tomatoes",
+            "qty": "4",
+            "for": "Tacos toppings + pico"
+          },
+          {
+            "name": "Garlic head",
+            "qty": "2",
+            "for": "Chicken + skillet + soup"
+          },
+          {
+            "name": "Fresh ginger root",
+            "qty": "1 small knob",
+            "for": "Red lentil soup"
+          },
+          {
+            "name": "Napa cabbage",
+            "qty": "1 head",
+            "for": "Sesame salad"
+          },
+          {
+            "name": "Red cabbage",
+            "qty": "1 small head",
+            "for": "Sesame salad"
+          },
+          {
+            "name": "Carrots",
+            "qty": "2 lb",
+            "for": "Salad + soup + snacks"
+          },
+          {
+            "name": "Snow peas",
+            "qty": "1 cup",
+            "for": "Sesame salad"
+          },
+          {
+            "name": "Shelled edamame",
+            "qty": "8 oz",
+            "for": "Sesame salad"
+          },
+          {
+            "name": "Baby spinach",
+            "qty": "10 oz",
+            "for": "Wraps + soup + smoothies"
+          },
+          {
+            "name": "Green onions",
+            "qty": "1 bunch",
+            "for": "Enchilada garnish"
+          },
+          {
+            "name": "Cucumber",
+            "qty": "1",
+            "for": "Wraps + snacks"
+          },
+          {
+            "name": "Berries",
+            "qty": "1 pint",
+            "for": "Parfait + oats"
+          },
+          {
+            "name": "Bananas",
+            "qty": "4",
+            "for": "Oats + snacks"
+          }
+        ]
+      },
+      {
+        "name": "Dairy / Refrigerated",
+        "items": [
+          {
+            "name": "Eggs",
+            "qty": "1 dozen",
+            "for": "Egg muffins + hard boiled"
+          },
+          {
+            "name": "Plain Greek yogurt",
+            "qty": "8 oz",
+            "for": "Parfait"
+          },
+          {
+            "name": "Cottage cheese",
+            "qty": "16 oz",
+            "for": "Toast"
+          },
+          {
+            "name": "Pasteurized queso fresco or Monterey Jack",
+            "qty": "8 oz",
+            "for": "Tacos + enchilada"
+          },
+          {
+            "name": "Pasteurized blue cheese crumbles",
+            "qty": "4 oz",
+            "for": "Buffalo sweet potatoes topping"
+          },
+          {
+            "name": "Pasteurized feta",
+            "qty": "4 oz",
+            "for": "Mediterranean wrap"
+          },
+          {
+            "name": "Shredded Monterey Jack",
+            "qty": "8 oz",
+            "for": "Enchilada"
+          },
+          {
+            "name": "Flour tortillas (large)",
+            "qty": "4",
+            "for": "Mediterranean + Buffalo wraps"
+          },
+          {
+            "name": "Hummus",
+            "qty": "8 oz",
+            "for": "Mediterranean wrap"
+          },
+          {
+            "name": "Tzatziki",
+            "qty": "8 oz",
+            "for": "Mediterranean wrap"
+          },
+          {
+            "name": "Buffalo wing sauce",
+            "qty": "1 small bottle",
+            "for": "Buffalo wrap + buffalo sweet potatoes"
+          },
+          {
+            "name": "Ranch dressing (pasteurized)",
+            "qty": "1 small bottle",
+            "for": "Buffalo sweet potatoes drizzle"
+          },
+          {
+            "name": "Sourdough bread",
+            "qty": "1 loaf",
+            "for": "Cottage cheese toast"
+          },
+          {
+            "name": "Diced ham or turkey sausage",
+            "qty": "8 oz",
+            "for": "Egg muffins"
+          }
+        ]
+      },
+      {
+        "name": "Pantry",
+        "items": [
+          {
+            "name": "Small corn tortillas",
+            "qty": "1 pack (24)",
+            "for": "Shredded chicken tacos + taco skillet"
+          },
+          {
+            "name": "Red enchilada sauce",
+            "qty": "1 can (15 oz)",
+            "for": "Enchilada skillet"
+          },
+          {
+            "name": "Black beans",
+            "qty": "2 cans (15 oz)",
+            "for": "Enchilada skillet + taco skillet"
+          },
+          {
+            "name": "Diced tomatoes (canned)",
+            "qty": "1 can (15 oz)",
+            "for": "Red lentil soup"
+          },
+          {
+            "name": "Tomato paste",
+            "qty": "1 small can",
+            "for": "Red lentil soup"
+          },
+          {
+            "name": "Vegetable broth",
+            "qty": "32 oz",
+            "for": "Red lentil soup"
+          },
+          {
+            "name": "Pancake mix",
+            "qty": "restock if low",
+            "for": "Sheet pan pancakes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 10,
+    "dateLabel": "Sun Jun 28 - Tue Jun 30 (Mon-Tue eating, post-travel mini week)",
+    "sections": [
+      {
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken cutlets (thin)",
+            "qty": "4 (about 1.25 lb)",
+            "for": "Air Fryer Chicken Parmesan (Mon)"
+          },
+          {
+            "name": "Ground turkey (93/7)",
+            "qty": "1.25 lb",
+            "for": "Air Fryer Turkey Meatballs (Tue)"
+          }
+        ]
+      },
+      {
+        "name": "Produce",
+        "items": [
+          {
+            "name": "Carrots",
+            "qty": "1 lb",
+            "for": "Snacks"
+          },
+          {
+            "name": "Lemons",
+            "qty": "1",
+            "for": "Garnish"
+          },
+          {
+            "name": "Garlic head",
+            "qty": "1",
+            "for": "Meatballs + sauce"
+          },
+          {
+            "name": "Fresh basil",
+            "qty": "1 small bunch",
+            "for": "Pasta + chicken parm garnish"
+          },
+          {
+            "name": "Yellow onion",
+            "qty": "1",
+            "for": "Meatballs"
+          },
+          {
+            "name": "Berries",
+            "qty": "1 pint",
+            "for": "Parfaits + snacks"
+          }
+        ]
+      },
+      {
+        "name": "Dairy / Refrigerated",
+        "items": [
+          {
+            "name": "Eggs",
+            "qty": "6",
+            "for": "Meatball binder + Chicken parm dredge"
+          },
+          {
+            "name": "Plain Greek yogurt",
+            "qty": "8 oz",
+            "for": "Parfaits"
+          },
+          {
+            "name": "Cottage cheese",
+            "qty": "16 oz",
+            "for": "Toast + bowls"
+          },
+          {
+            "name": "Fresh mozzarella",
+            "qty": "8 oz",
+            "for": "Chicken Parmesan"
+          },
+          {
+            "name": "Grated parmesan",
+            "qty": "4 oz",
+            "for": "Chicken Parm + meatballs"
+          },
+          {
+            "name": "Sourdough bread",
+            "qty": "1 loaf",
+            "for": "Cottage cheese toast"
+          }
+        ]
+      },
+      {
+        "name": "Pantry",
+        "items": [
+          {
+            "name": "Marinara sauce (jarred)",
+            "qty": "2 jars (24 oz)",
+            "for": "Chicken Parm + Meatballs"
+          },
+          {
+            "name": "Panko breadcrumbs",
+            "qty": "1 box",
+            "for": "Chicken Parm + meatballs"
+          },
+          {
+            "name": "Pasta (rigatoni or penne)",
+            "qty": "1 box (1 lb)",
+            "for": "Turkey meatballs pasta"
           }
         ]
       }

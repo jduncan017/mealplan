@@ -192,4 +192,79 @@ export const prepStepMeals: Record<string, PrepStepMapping> = {
   },
   "5:3": { meals: ["hard-boiled-eggs"] },
   "5:4": { meals: ["chicken-tortilla-soup"] },
+
+  // Week 6 (Jun 1-6, 4 eating days then travel)
+  "6:0": { meals: ["veggie-egg-muffins"] },
+  "6:1": { meals: ["protein-overnight-oats"] },
+  "6:2": { meals: ["greek-yogurt-parfait"] },
+  "6:3": { meals: ["hard-boiled-eggs"] },
+  "6:4": { meals: ["power-protein-smoothie"] },
+
+  // Week 7 (Tue Jun 9-Sat Jun 13, post-travel mini prep)
+  "7:0": { meals: ["veggie-egg-muffins"] },
+  "7:1": { meals: ["greek-yogurt-parfait"] },
+  "7:2": { meals: ["hard-boiled-eggs"] },
+
+  // Week 8 (Sun Jun 14-Sat Jun 20, full week)
+  "8:0": {
+    meals: ["mississippi-pot-roast", "beef-barbacoa-tacos"],
+    base: "Instant Pot Mississippi Pot Roast: sear chuck roast, add pepperoncini, butter, ranch + au jus packets, broth. Pressure cook 70 min + 15 min natural release. Shred when done.",
+    segments: [
+      {
+        meals: ["mississippi-pot-roast"],
+        text: "Serve tonight for Mississippi Pot Roast.",
+      },
+      {
+        meals: ["beef-barbacoa-tacos"],
+        text: "Save 3 cups shredded beef in the fridge for Mon Beef Barbacoa Tacos.",
+      },
+    ],
+  },
+  "8:1": { meals: ["veggie-egg-muffins"] },
+  "8:2": { meals: ["protein-overnight-oats"] },
+  "8:3": { meals: ["greek-yogurt-parfait"] },
+  "8:4": { meals: ["make-ahead-breakfast-burritos"] },
+  "8:5": { meals: ["hard-boiled-eggs"] },
+
+  // Week 9 (Sun Jun 21-Thu Jun 25, then travel)
+  "9:0": {
+    meals: [
+      "shredded-chicken-street-tacos",
+      "chicken-enchilada-skillet",
+      "buffalo-chicken-stuffed-sweet-potatoes",
+      "mediterranean-chicken-wrap",
+      "buffalo-chicken-wrap",
+    ],
+    base: "Instant Pot shredded chicken (big batch): sauté onion + garlic + cumin + chili powder + smoked paprika, add chicken thighs, broth, lime juice. Pressure cook 15 min + 10 min natural release. Shred.",
+    segments: [
+      {
+        meals: ["shredded-chicken-street-tacos"],
+        text: "Use 2 cups tonight for Shredded Chicken Street Tacos.",
+      },
+      {
+        meals: ["chicken-enchilada-skillet"],
+        text: "Save 2.5 cups for Mon Chicken Enchilada Skillet.",
+      },
+      {
+        meals: ["mediterranean-chicken-wrap"],
+        text: "Save 1.5 cups plain for Wed Mediterranean Chicken Wrap.",
+      },
+      {
+        meals: ["buffalo-chicken-stuffed-sweet-potatoes"],
+        text: "Save 2 cups for Wed Buffalo Chicken Stuffed Sweet Potatoes (toss with buffalo sauce when ready).",
+      },
+      {
+        meals: ["buffalo-chicken-wrap"],
+        text: "Save 1.5 cups for Thu Buffalo Chicken Wrap (toss with buffalo sauce in a jar).",
+      },
+    ],
+  },
+  "9:1": { meals: ["veggie-egg-muffins"] },
+  "9:2": { meals: ["protein-overnight-oats"] },
+  "9:3": { meals: ["greek-yogurt-parfait"] },
+  "9:4": { meals: ["hard-boiled-eggs"] },
+
+  // Week 10 (Mon Jun 29-Tue Jun 30, post-travel 2-day mini week)
+  "10:0": { meals: [] },
+  "10:1": { meals: ["greek-yogurt-parfait"] },
 };

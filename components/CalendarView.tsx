@@ -25,6 +25,10 @@ function isViewMode(v: string | null): v is ViewMode {
   return v === "day" || v === "week" || v === "month";
 }
 
+function isEmptyDay(day: CalendarDay): boolean {
+  return !day.breakfast && !day.lunch && !day.dinner;
+}
+
 export function CalendarView({
   days,
   recipes,
@@ -212,6 +216,7 @@ function DayView({
   onPrev: () => void;
   onNext: () => void;
 }) {
+  const empty = isEmptyDay(day);
   const prevDinner = previousDayDinner(days, day.date, recipes);
   const breakfastRecipe = resolveMealRecipe(day.breakfast, "breakfast", recipes);
   const lunchRecipe = resolveMealRecipe(day.lunch, "lunch", recipes, {
@@ -222,57 +227,67 @@ function DayView({
     <section className="animate-fadeIn">
       <Nav label={formatDayLong(day.date)} onPrev={onPrev} onNext={onNext} />
 
-      {recipe && (
-        <Link
-          href={`/recipes/${recipe.slug}`}
-          className="group relative mb-4 block overflow-hidden rounded-card shadow-card transition hover:shadow-lift"
-        >
-          <div className="relative aspect-[16/9] w-full">
-            <RecipeImage
-              recipe={recipe}
-              sizes="(max-width: 768px) 100vw, 768px"
-              fill
-            />
-            <div className="absolute inset-0 scrim-bottom" />
-            <div className="absolute left-4 right-4 bottom-4 text-white">
-              <div className="text-hero mb-1 text-xs font-bold uppercase tracking-widest">
-                Dinner
-              </div>
-              <div className="flex items-end justify-between gap-3">
-                <h2 className="text-hero font-display text-2xl font-semibold leading-tight sm:text-3xl">
-                  {day.dinner}
-                </h2>
-                <span className="rounded-pill bg-white px-2.5 py-1 text-sm font-bold text-[#0d7368] shadow-card">
-                  {recipe.proteinGrams}g
-                </span>
-              </div>
-            </div>
-            {day.isFreezerBackup && (
-              <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-pill bg-tertiary-300 px-2.5 py-1 text-xs font-bold text-white shadow-card">
-                <Snowflake className="h-3.5 w-3.5" /> Freezer backup
-              </div>
-            )}
+      {empty ? (
+        <div className="rounded-card border-2 border-dashed border-mpneutral-200 bg-surface px-6 py-12 text-center shadow-card">
+          <div className="font-display text-2xl font-bold uppercase tracking-wider text-mpneutral-300">
+            No meals planned
           </div>
-        </Link>
-      )}
+        </div>
+      ) : (
+        <>
+          {recipe && (
+            <Link
+              href={`/recipes/${recipe.slug}`}
+              className="group relative mb-4 block overflow-hidden rounded-card shadow-card transition hover:shadow-lift"
+            >
+              <div className="relative aspect-[16/9] w-full">
+                <RecipeImage
+                  recipe={recipe}
+                  sizes="(max-width: 768px) 100vw, 768px"
+                  fill
+                />
+                <div className="absolute inset-0 scrim-bottom" />
+                <div className="absolute left-4 right-4 bottom-4 text-white">
+                  <div className="text-hero mb-1 text-xs font-bold uppercase tracking-widest">
+                    Dinner
+                  </div>
+                  <div className="flex items-end justify-between gap-3">
+                    <h2 className="text-hero font-display text-2xl font-semibold leading-tight sm:text-3xl">
+                      {day.dinner}
+                    </h2>
+                    <span className="rounded-pill bg-white px-2.5 py-1 text-sm font-bold text-[#0d7368] shadow-card">
+                      {recipe.proteinGrams}g
+                    </span>
+                  </div>
+                </div>
+                {day.isFreezerBackup && (
+                  <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-pill bg-tertiary-300 px-2.5 py-1 text-xs font-bold text-white shadow-card">
+                    <Snowflake className="h-3.5 w-3.5" /> Freezer backup
+                  </div>
+                )}
+              </div>
+            </Link>
+          )}
 
-      <div className="overflow-hidden rounded-card border border-app-border bg-surface shadow-card">
-        <Meal
-          label="Breakfast"
-          category="breakfast"
-          text={day.breakfast}
-          recipe={breakfastRecipe}
-          accent="secondary"
-        />
-        <Meal
-          label="Lunch"
-          category="lunch"
-          text={day.lunch}
-          recipe={lunchRecipe}
-          accent="tertiary"
-          isLeftover={/leftover/i.test(day.lunch)}
-        />
-      </div>
+          <div className="overflow-hidden rounded-card border border-app-border bg-surface shadow-card">
+            <Meal
+              label="Breakfast"
+              category="breakfast"
+              text={day.breakfast}
+              recipe={breakfastRecipe}
+              accent="secondary"
+            />
+            <Meal
+              label="Lunch"
+              category="lunch"
+              text={day.lunch}
+              recipe={lunchRecipe}
+              accent="tertiary"
+              isLeftover={/leftover/i.test(day.lunch)}
+            />
+          </div>
+        </>
+      )}
 
       {day.notes && (
         <div className="mt-4 flex items-start gap-3 rounded-card border-l-4 border-tertiary-300 bg-tertiary-100 p-4">
@@ -532,16 +547,17 @@ function DayListItem({
   isToday?: boolean;
 }) {
   const weekend = isWeekend(day.dayName);
+  const empty = isEmptyDay(day);
   return (
     <button
       onClick={() => onSelect(day.date)}
       className={`flex w-full items-stretch gap-3 overflow-hidden rounded-card border border-app-border bg-surface text-left shadow-card transition hover:-translate-y-0.5 hover:shadow-lift ${
         isToday ? "ring-2 ring-secondary-300 ring-offset-2 ring-offset-background" : ""
-      }`}
+      } ${empty ? "opacity-60" : ""}`}
     >
       <div
         className={`flex w-14 shrink-0 flex-col items-center justify-center py-3 text-white sm:w-16 ${
-          weekend ? "bg-secondary-300" : "bg-primary-300"
+          empty ? "bg-mpneutral-300" : weekend ? "bg-secondary-300" : "bg-primary-300"
         }`}
       >
         <span className="font-display text-[0.65rem] font-bold uppercase tracking-wider sm:text-xs">
@@ -551,10 +567,20 @@ function DayListItem({
           {day.date.slice(8, 10)}
         </span>
       </div>
-      <div className="flex-1 min-w-0 space-y-1 py-2.5 pr-3">
-        <MealLine label="B" text={day.breakfast} />
-        <MealLine label="L" text={day.lunch} />
-        <MealLine label="D" text={day.dinner} />
+      <div className="flex-1 min-w-0 py-2.5 pr-3">
+        {empty ? (
+          <div className="flex h-full items-center">
+            <span className="font-display text-sm font-bold uppercase tracking-wider text-mpneutral-300">
+              No meals planned
+            </span>
+          </div>
+        ) : (
+          <div className="space-y-1">
+            <MealLine label="B" text={day.breakfast} />
+            <MealLine label="L" text={day.lunch} />
+            <MealLine label="D" text={day.dinner} />
+          </div>
+        )}
       </div>
       {day.isFreezerBackup && (
         <div className="flex items-center pr-2">

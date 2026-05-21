@@ -74,6 +74,7 @@ QUERY_OVERRIDES: dict[str, str] = {
     "mississippi-pot-roast": "pot roast beef",
     "power-protein-smoothie": "protein smoothie glass",
     "tuna-salad-on-whole-grain": "tuna salad sandwich",
+    "sheet-pan-honey-soy-salmon": "glazed salmon broccoli",
 }
 
 

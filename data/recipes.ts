@@ -34,6 +34,31 @@ export const recipes: Recipe[] = [
       "Toppings: diced white onion, cilantro, avocado, pico de gallo, lime",
       "Queso fresco (pasteurized)"
     ],
+    "ingredientItems": [
+      { "name": "Boneless skinless chicken thighs", "qty": 3, "unit": "lb", "section": "Proteins" },
+      { "name": "Olive oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Garlic", "qty": 4, "unit": "clove", "section": "Produce" },
+      { "name": "Chili powder", "qty": 1.5, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Cumin", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Smoked paprika", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Salt", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Low-sodium chicken broth", "qty": 1, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Lime", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Small corn tortillas", "qty": 12, "unit": "ea", "section": "Pantry/Dry" },
+      { "name": "White onion", "qty": 0.5, "unit": "ea", "section": "Produce" },
+      { "name": "Cilantro", "qty": 0.5, "unit": "bunch", "section": "Produce" },
+      { "name": "Avocado", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Pico de gallo", "qty": 1, "unit": "cup", "section": "Produce" },
+      { "name": "Queso fresco (pasteurized)", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" }
+    ],
+    "produces": {
+      "name": "Shredded cooked chicken",
+      "qty": 6,
+      "unit": "cup",
+      "sourceIngredient": "Boneless skinless chicken thighs",
+      "rawPerCookedQty": 0.5
+    },
     "steps": [
       "Set Instant Pot to Sauté. Heat oil, cook onion 3 min, add garlic, spices, cook 1 min.",
       "Add chicken thighs, broth, and lime juice. Lock lid.",
@@ -68,6 +93,16 @@ export const recipes: Recipe[] = [
       "2 tbsp ranch seasoning",
       "1/2 cup crumbled blue cheese (pasteurized) or feta",
       "2 green onions, sliced"
+    ],
+    "ingredientItems": [
+      { "name": "Shredded cooked chicken", "qty": 2.5, "unit": "cup", "section": "Proteins", "derivedFromBase": true },
+      { "name": "Sweet potato (medium)", "qty": 4, "unit": "ea", "section": "Produce" },
+      { "name": "Buffalo hot sauce (Frank's RedHot)", "qty": 0.33, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Unsalted butter", "qty": 3, "unit": "tbsp", "section": "Dairy/Refrigerated", "pantry": true },
+      { "name": "Plain Greek yogurt", "qty": 0.5, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Ranch seasoning", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Blue cheese crumbles (pasteurized)", "qty": 0.5, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Green onions", "qty": 2, "unit": "ea", "section": "Produce" }
     ],
     "steps": [
       "Oven 425F. Pierce sweet potatoes, roast on sheet pan 45-50 min until soft.",
@@ -106,6 +141,20 @@ export const recipes: Recipe[] = [
       "2 cups shredded Monterey Jack (pasteurized)",
       "Cilantro, green onion, avocado to top"
     ],
+    "ingredientItems": [
+      { "name": "Shredded cooked chicken", "qty": 2.5, "unit": "cup", "section": "Proteins", "derivedFromBase": true },
+      { "name": "Olive oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Red bell pepper", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Black beans (canned, 15 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Frozen corn", "qty": 1, "unit": "cup", "section": "Frozen" },
+      { "name": "Red enchilada sauce", "qty": 2, "unit": "cup", "section": "Pantry/Dry" },
+      { "name": "Corn tortillas (small)", "qty": 8, "unit": "ea", "section": "Pantry/Dry" },
+      { "name": "Shredded Monterey Jack (pasteurized)", "qty": 8, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Cilantro", "qty": 0.5, "unit": "bunch", "section": "Produce" },
+      { "name": "Green onions", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Avocado", "qty": 1, "unit": "ea", "section": "Produce" }
+    ],
     "steps": [
       "Oven 400F. In oven-safe skillet, sauté onion and pepper 5 min.",
       "Stir in chicken, beans, corn, enchilada sauce, and torn tortillas.",
@@ -140,6 +189,23 @@ export const recipes: Recipe[] = [
       "4 cups mashed potatoes (for serving)",
       "Steamed green beans"
     ],
+    "ingredientItems": [
+      { "name": "Chuck roast", "qty": 3.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Ranch seasoning packet", "qty": 1, "unit": "ea", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Au jus gravy packet", "qty": 1, "unit": "ea", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Unsalted butter", "qty": 0.5, "unit": "cup", "section": "Dairy/Refrigerated", "pantry": true },
+      { "name": "Pepperoncini peppers (jarred)", "qty": 1, "unit": "jar", "section": "Pantry/Dry" },
+      { "name": "Beef broth", "qty": 1, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yukon Gold potatoes", "qty": 2, "unit": "lb", "section": "Produce" },
+      { "name": "Green beans", "qty": 1, "unit": "lb", "section": "Produce" }
+    ],
+    "produces": {
+      "name": "Shredded cooked beef (from pot roast)",
+      "qty": 6,
+      "unit": "cup",
+      "sourceIngredient": "Chuck roast",
+      "rawPerCookedQty": 0.5
+    },
     "steps": [
       "Season roast with salt and pepper. Set Instant Pot to Sauté, brown roast all sides 2 min each.",
       "Add broth, ranch and au jus packets, butter, pepperoncini and brine.",
@@ -176,6 +242,19 @@ export const recipes: Recipe[] = [
       "Small flour or corn tortillas",
       "Diced white onion, cilantro, cotija or queso fresco",
       "Mexican rice, black beans"
+    ],
+    "ingredientItems": [
+      { "name": "Shredded cooked beef (from pot roast)", "qty": 2.5, "unit": "cup", "section": "Proteins", "derivedFromBase": true },
+      { "name": "Cumin", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Smoked paprika", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Chipotle in adobo (canned)", "qty": 1, "unit": "ea", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Lime", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Small corn or flour tortillas", "qty": 12, "unit": "ea", "section": "Pantry/Dry" },
+      { "name": "White onion", "qty": 0.5, "unit": "ea", "section": "Produce" },
+      { "name": "Cilantro", "qty": 0.5, "unit": "bunch", "section": "Produce" },
+      { "name": "Cotija or queso fresco (pasteurized)", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Rice (cooked)", "qty": 2, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Black beans (canned, 15 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" }
     ],
     "steps": [
       "Warm shredded beef in skillet with cumin, paprika, chipotle, and lime juice.",
@@ -282,6 +361,15 @@ export const recipes: Recipe[] = [
       "1 tbsp fresh dill (or 1 tsp dried)",
       "Salt, pepper"
     ],
+    "ingredientItems": [
+      { "name": "Salmon fillets (6 oz)", "qty": 4, "unit": "ea", "section": "Proteins" },
+      { "name": "Baby potatoes", "qty": 1.5, "unit": "lb", "section": "Produce" },
+      { "name": "Asparagus", "qty": 1, "unit": "bunch", "section": "Produce" },
+      { "name": "Olive oil", "qty": 3, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Lemon", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Garlic", "qty": 3, "unit": "clove", "section": "Produce" },
+      { "name": "Fresh dill", "qty": 1, "unit": "tbsp", "section": "Produce" }
+    ],
     "steps": [
       "Oven 425F. Toss potatoes with olive oil, salt, pepper, roast 15 min.",
       "Push potatoes to one side, add asparagus and salmon.",
@@ -316,6 +404,21 @@ export const recipes: Recipe[] = [
       "Flour tortillas",
       "Toppings: sour cream, shredded cheese, cilantro, lime"
     ],
+    "ingredientItems": [
+      { "name": "Chicken breast", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Bell peppers (mixed colors)", "qty": 3, "unit": "ea", "section": "Produce" },
+      { "name": "Red onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Olive oil", "qty": 3, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Chili powder", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Cumin", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Garlic powder", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Smoked paprika", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Lime", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Flour tortillas (large)", "qty": 8, "unit": "ea", "section": "Bakery" },
+      { "name": "Sour cream", "qty": 0.5, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Shredded cheddar (pasteurized)", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Cilantro", "qty": 0.5, "unit": "bunch", "section": "Produce" }
+    ],
     "steps": [
       "Oven 425F. Toss chicken, peppers, onion with oil and seasoning on sheet pan.",
       "Roast 20-25 min, tossing halfway, until chicken is 165F.",
@@ -349,6 +452,17 @@ export const recipes: Recipe[] = [
       "1/2 cup feta (pasteurized)",
       "Kalamata olives, chopped parsley",
       "Cucumber tomato salad on the side"
+    ],
+    "ingredientItems": [
+      { "name": "Bone-in skin-on chicken thighs", "qty": 8, "unit": "ea", "section": "Proteins" },
+      { "name": "Baby gold potatoes", "qty": 1.5, "unit": "lb", "section": "Produce" },
+      { "name": "Olive oil", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Lemon", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Garlic", "qty": 4, "unit": "clove", "section": "Produce" },
+      { "name": "Dried oregano", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Feta (pasteurized)", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Kalamata olives (pitted)", "qty": 0.5, "unit": "cup", "section": "Pantry/Dry" },
+      { "name": "Fresh parsley", "qty": 1, "unit": "bunch", "section": "Produce" }
     ],
     "steps": [
       "Whisk oil, lemon, garlic, oregano, salt. Marinate chicken 15 min+.",
@@ -385,6 +499,18 @@ export const recipes: Recipe[] = [
       "1 cup shredded mozzarella (pasteurized)",
       "12 oz whole wheat pasta or zucchini noodles",
       "Fresh basil"
+    ],
+    "ingredientItems": [
+      { "name": "Chicken breast cutlets", "qty": 4, "unit": "ea", "section": "Proteins" },
+      { "name": "Panko breadcrumbs", "qty": 1, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Grated parmesan (pasteurized)", "qty": 0.5, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Italian seasoning", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Eggs", "qty": 2, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "All-purpose flour", "qty": 0.5, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Marinara sauce (jarred)", "qty": 1.5, "unit": "cup", "section": "Pantry/Dry" },
+      { "name": "Shredded mozzarella (pasteurized)", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Pasta (penne or similar)", "qty": 12, "unit": "oz", "section": "Pantry/Dry" },
+      { "name": "Fresh basil", "qty": 0.5, "unit": "bunch", "section": "Produce" }
     ],
     "steps": [
       "Dredge chicken in flour, then egg, then panko mixed with parmesan and seasoning.",
@@ -424,6 +550,19 @@ export const recipes: Recipe[] = [
       "12 oz rigatoni or penne",
       "Fresh basil, extra parmesan"
     ],
+    "ingredientItems": [
+      { "name": "Ground turkey (93/7)", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Panko breadcrumbs", "qty": 0.5, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Whole milk", "qty": 0.33, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Grated parmesan", "qty": 0.25, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Egg", "qty": 1, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Garlic", "qty": 3, "unit": "clove", "section": "Produce" },
+      { "name": "Fresh parsley", "qty": 2, "unit": "tbsp", "section": "Produce" },
+      { "name": "Italian seasoning", "qty": 0.5, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Marinara sauce (jarred)", "qty": 24, "unit": "oz", "section": "Pantry/Dry" },
+      { "name": "Pasta (rigatoni or penne)", "qty": 12, "unit": "oz", "section": "Pantry/Dry" },
+      { "name": "Fresh basil", "qty": 0.5, "unit": "bunch", "section": "Produce" }
+    ],
     "steps": [
       "Mix turkey with panko, milk, parmesan, egg, garlic, parsley, seasoning.",
       "Roll into 1.5 inch balls (about 20). Freeze half raw for backup night.",
@@ -461,6 +600,22 @@ export const recipes: Recipe[] = [
       "1 cup shredded cheddar",
       "Greek yogurt, avocado, cilantro, lime to top"
     ],
+    "ingredientItems": [
+      { "name": "Ground turkey (93/7)", "qty": 1.25, "unit": "lb", "section": "Proteins" },
+      { "name": "Olive oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Bell pepper", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Taco seasoning (or homemade chili+cumin+paprika+garlic+onion powder)", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Diced tomatoes with green chiles (canned)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Cooked rice", "qty": 1, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Black beans (canned, 15 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Frozen corn", "qty": 1, "unit": "cup", "section": "Frozen" },
+      { "name": "Shredded cheddar (pasteurized)", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Plain Greek yogurt", "qty": 0.5, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Avocado", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Cilantro", "qty": 0.5, "unit": "bunch", "section": "Produce" },
+      { "name": "Lime", "qty": 1, "unit": "ea", "section": "Produce" }
+    ],
     "steps": [
       "Heat oil, sauté onion and pepper 5 min.",
       "Add turkey, brown and break up, 6 min.",
@@ -496,6 +651,20 @@ export const recipes: Recipe[] = [
       "1 can diced tomatoes",
       "2 cups cooked rice or cauliflower rice",
       "Green onions, parsley"
+    ],
+    "ingredientItems": [
+      { "name": "Large shrimp (peeled, deveined)", "qty": 1, "unit": "lb", "section": "Proteins" },
+      { "name": "Andouille or chicken sausage", "qty": 12, "unit": "oz", "section": "Proteins" },
+      { "name": "Olive oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Bell peppers", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Garlic", "qty": 3, "unit": "clove", "section": "Produce" },
+      { "name": "Smoked paprika", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Cajun seasoning", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Diced tomatoes (canned, 15 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Cooked rice", "qty": 2, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Green onions", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Fresh parsley", "qty": 0.5, "unit": "bunch", "section": "Produce" }
     ],
     "steps": [
       "Heat oil, brown sausage 4 min, remove.",
@@ -536,6 +705,20 @@ export const recipes: Recipe[] = [
       "1.5 cups shredded mozzarella",
       "1/4 cup grated parmesan",
       "1 cup marinara for the baking dish"
+    ],
+    "ingredientItems": [
+      { "name": "Large bell peppers", "qty": 5, "unit": "ea", "section": "Produce" },
+      { "name": "Ground turkey (93/7)", "qty": 1.25, "unit": "lb", "section": "Proteins" },
+      { "name": "Olive oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Garlic", "qty": 3, "unit": "clove", "section": "Produce" },
+      { "name": "Italian seasoning", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Fire roasted diced tomatoes (canned, 15 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Quinoa (cooked, ~1/2 cup dry)", "qty": 1.5, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Baby spinach", "qty": 3, "unit": "cup", "section": "Produce" },
+      { "name": "Shredded mozzarella (pasteurized)", "qty": 1.5, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Grated parmesan", "qty": 0.25, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Marinara sauce (jarred)", "qty": 1, "unit": "cup", "section": "Pantry/Dry" }
     ],
     "steps": [
       "Oven 375F. Par-cook pepper shells in boiling water 4 min, drain.",
@@ -614,6 +797,22 @@ export const recipes: Recipe[] = [
       "4 cups chopped escarole, kale, or baby spinach",
       "Parmesan and lemon to finish"
     ],
+    "ingredientItems": [
+      { "name": "Ground turkey (93/7)", "qty": 1, "unit": "lb", "section": "Proteins" },
+      { "name": "Panko breadcrumbs", "qty": 0.33, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Egg", "qty": 1, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Grated parmesan", "qty": 0.25, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Garlic", "qty": 2, "unit": "clove", "section": "Produce" },
+      { "name": "Italian seasoning", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Olive oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Carrots", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Celery stalks", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Chicken broth", "qty": 8, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Acini de pepe or orzo pasta", "qty": 1, "unit": "cup", "section": "Pantry/Dry" },
+      { "name": "Escarole or kale", "qty": 1, "unit": "bunch", "section": "Produce" },
+      { "name": "Lemon", "qty": 1, "unit": "ea", "section": "Produce" }
+    ],
     "steps": [
       "Mix meatball ingredients, roll into tiny 3/4 inch balls.",
       "Sauté in Instant Pot to brown lightly, remove. Sauté aromatics 5 min.",
@@ -650,6 +849,23 @@ export const recipes: Recipe[] = [
       "Juice of 1 lemon",
       "4 cups baby spinach",
       "Plain Greek yogurt, parsley, olive oil to serve"
+    ],
+    "ingredientItems": [
+      { "name": "Olive oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Carrots", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Garlic", "qty": 4, "unit": "clove", "section": "Produce" },
+      { "name": "Tomato paste", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Cumin", "qty": 1.5, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Smoked paprika", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Turmeric", "qty": 0.5, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Red lentils (dry)", "qty": 1.5, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Vegetable broth", "qty": 6, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Diced tomatoes (canned, 15 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Lemon", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Baby spinach", "qty": 4, "unit": "cup", "section": "Produce" },
+      { "name": "Plain Greek yogurt", "qty": 0.5, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Fresh parsley", "qty": 0.25, "unit": "bunch", "section": "Produce" }
     ],
     "steps": [
       "Sauté onion and carrots in oil 5 min, add garlic and spices 1 min.",
@@ -776,7 +992,7 @@ export const recipes: Recipe[] = [
     "category": "breakfast",
     "tool": null,
     "proteinGrams": 24,
-    "servings": null,
+    "servings": 4,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -793,6 +1009,14 @@ export const recipes: Recipe[] = [
       "1/2 cup shredded cheddar",
       "salt pepper"
     ],
+    "ingredientItems": [
+      { "name": "Eggs", "qty": 10, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Cottage cheese", "qty": 1, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Baby spinach", "qty": 1, "unit": "cup", "section": "Produce" },
+      { "name": "Bell pepper", "qty": 0.5, "unit": "ea", "section": "Produce" },
+      { "name": "Diced ham or turkey sausage", "qty": 8, "unit": "oz", "section": "Proteins" },
+      { "name": "Shredded cheddar (pasteurized)", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" }
+    ],
     "steps": [
       "Whisk eggs and cottage cheese.",
       "Divide fillings into greased muffin tin.",
@@ -807,7 +1031,7 @@ export const recipes: Recipe[] = [
     "category": "breakfast",
     "tool": null,
     "proteinGrams": 32,
-    "servings": null,
+    "servings": 4,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -826,6 +1050,16 @@ export const recipes: Recipe[] = [
       "1/2 banana sliced",
       "berries"
     ],
+    "ingredientItems": [
+      { "name": "Rolled oats", "qty": 2, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Whey or plant protein powder", "qty": 4, "unit": "scoop", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Whole milk (or alt)", "qty": 4, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Chia seeds", "qty": 8, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Peanut butter", "qty": 8, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Maple syrup", "qty": 4, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Bananas", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Berries", "qty": 1, "unit": "pint", "section": "Produce" }
+    ],
     "steps": [
       "Layer in mason jar, shake, refrigerate overnight.",
       "Top with fruit and nuts in the morning."
@@ -838,7 +1072,7 @@ export const recipes: Recipe[] = [
     "category": "breakfast",
     "tool": null,
     "proteinGrams": 28,
-    "servings": null,
+    "servings": 1,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -854,6 +1088,13 @@ export const recipes: Recipe[] = [
       "1 tsp honey",
       "chia seeds"
     ],
+    "ingredientItems": [
+      { "name": "Plain Greek yogurt (full fat)", "qty": 8, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Granola", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Berries", "qty": 0.5, "unit": "cup", "section": "Produce" },
+      { "name": "Sliced almonds", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Honey", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true }
+    ],
     "steps": [
       "Layer yogurt, fruit, granola, nuts.",
       "Drizzle honey."
@@ -866,7 +1107,7 @@ export const recipes: Recipe[] = [
     "category": "breakfast",
     "tool": null,
     "proteinGrams": 30,
-    "servings": null,
+    "servings": 6,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -884,6 +1125,14 @@ export const recipes: Recipe[] = [
       "1.5 cups shredded cheese",
       "salsa"
     ],
+    "ingredientItems": [
+      { "name": "Flour tortillas (large, no whole wheat per preference)", "qty": 6, "unit": "ea", "section": "Bakery" },
+      { "name": "Eggs", "qty": 10, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Black beans (canned, 15 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Cooked turkey sausage or chorizo", "qty": 12, "unit": "oz", "section": "Proteins" },
+      { "name": "Shredded Monterey Jack or cheddar (pasteurized)", "qty": 6, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Salsa", "qty": 1, "unit": "cup", "section": "Pantry/Dry", "pantry": true }
+    ],
     "steps": [
       "Scramble eggs, cook sausage.",
       "Build each burrito with eggs, sausage, beans, cheese, salsa.",
@@ -898,7 +1147,7 @@ export const recipes: Recipe[] = [
     "category": "breakfast",
     "tool": null,
     "proteinGrams": 26,
-    "servings": null,
+    "servings": 4,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -911,6 +1160,13 @@ export const recipes: Recipe[] = [
       "sliced tomato or cucumber",
       "everything bagel seasoning",
       "1 sliced hard boiled egg"
+    ],
+    "ingredientItems": [
+      { "name": "Sourdough or whole grain bread", "qty": 1, "unit": "loaf", "section": "Bakery" },
+      { "name": "Cottage cheese (full fat)", "qty": 16, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Tomato or cucumber", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Everything bagel seasoning", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Eggs", "qty": 4, "unit": "ea", "section": "Dairy/Refrigerated" }
     ],
     "steps": [
       "Toast bread.",
@@ -925,7 +1181,7 @@ export const recipes: Recipe[] = [
     "category": "breakfast",
     "tool": null,
     "proteinGrams": 35,
-    "servings": null,
+    "servings": 1,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -944,6 +1200,16 @@ export const recipes: Recipe[] = [
       "1 tbsp peanut butter",
       "1 tbsp chia seeds",
       "handful spinach"
+    ],
+    "ingredientItems": [
+      { "name": "Whey or collagen protein powder", "qty": 1, "unit": "scoop", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Whole milk (or alt)", "qty": 1, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Plain Greek yogurt", "qty": 0.5, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Frozen bananas", "qty": 1, "unit": "ea", "section": "Frozen" },
+      { "name": "Frozen berries", "qty": 1, "unit": "cup", "section": "Frozen" },
+      { "name": "Peanut butter", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Chia seeds", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Baby spinach", "qty": 0.5, "unit": "cup", "section": "Produce" }
     ],
     "steps": [
       "Blend all until smooth.",
@@ -981,7 +1247,7 @@ export const recipes: Recipe[] = [
     "category": "breakfast",
     "tool": null,
     "proteinGrams": 22,
-    "servings": null,
+    "servings": 6,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -992,6 +1258,11 @@ export const recipes: Recipe[] = [
       "2 boxes Kodiak Cakes mix (or protein pancake mix) per instructions",
       "2 cups blueberries scattered on top",
       "cinnamon"
+    ],
+    "ingredientItems": [
+      { "name": "Pancake mix (Kodiak Cakes or protein blend)", "qty": 2, "unit": "box", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Blueberries", "qty": 2, "unit": "cup", "section": "Produce" },
+      { "name": "Cinnamon", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true }
     ],
     "steps": [
       "Pour batter on greased sheet pan, scatter berries, bake 425F for 13-15 min.",
@@ -1022,7 +1293,7 @@ export const recipes: Recipe[] = [
     "category": "lunch",
     "tool": null,
     "proteinGrams": 35,
-    "servings": null,
+    "servings": 2,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -1032,8 +1303,19 @@ export const recipes: Recipe[] = [
       "Lunch"
     ],
     "ingredients": [],
+    "ingredientItems": [
+      { "name": "Shredded cooked chicken", "qty": 1.5, "unit": "cup", "section": "Proteins", "derivedFromBase": true },
+      { "name": "Flour tortillas (large, no whole wheat per preference)", "qty": 2, "unit": "ea", "section": "Bakery" },
+      { "name": "Hummus", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Tzatziki", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "English cucumber", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Tomato", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Red onion", "qty": 0.5, "unit": "ea", "section": "Produce" },
+      { "name": "Pasteurized feta", "qty": 2, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Kalamata olives (pitted)", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry" }
+    ],
     "steps": [],
-    "notes": "Uses reusable shredded chicken. Large spinach tortilla, hummus, shredded chicken, cucumber, tomato, red onion, feta (pasteurized), kalamata olives, tzatziki."
+    "notes": "Uses reusable shredded chicken from Sunday IP base. Large flour tortilla, hummus, shredded chicken, cucumber, tomato, red onion, feta (pasteurized), kalamata olives, tzatziki."
   },
   {
     "slug": "buffalo-chicken-wrap",
@@ -1041,7 +1323,7 @@ export const recipes: Recipe[] = [
     "category": "lunch",
     "tool": null,
     "proteinGrams": 38,
-    "servings": null,
+    "servings": 2,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -1050,8 +1332,17 @@ export const recipes: Recipe[] = [
       "Lunch"
     ],
     "ingredients": [],
+    "ingredientItems": [
+      { "name": "Shredded cooked chicken", "qty": 1.5, "unit": "cup", "section": "Proteins", "derivedFromBase": true },
+      { "name": "Flour tortillas (large, no whole wheat per preference)", "qty": 2, "unit": "ea", "section": "Bakery" },
+      { "name": "Buffalo wing sauce", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Romaine", "qty": 1, "unit": "head", "section": "Produce" },
+      { "name": "Celery", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Blue cheese crumbles (pasteurized)", "qty": 2, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Carrots (shredded)", "qty": 1, "unit": "cup", "section": "Produce" }
+    ],
     "steps": [],
-    "notes": "Uses reusable shredded chicken. Tortilla, buffalo-sauced chicken, romaine, diced celery, blue cheese or ranch, shredded carrots."
+    "notes": "Uses reusable shredded chicken tossed in buffalo sauce. Tortilla, chicken, romaine, celery, blue cheese, carrots."
   },
   {
     "slug": "chicken-caesar-wrap",
@@ -1077,13 +1368,24 @@ export const recipes: Recipe[] = [
     "category": "lunch",
     "tool": null,
     "proteinGrams": 26,
-    "servings": null,
+    "servings": 4,
     "prepMin": null,
     "cookMin": null,
     "tags": [
       "Lunch"
     ],
     "ingredients": [],
+    "ingredientItems": [
+      { "name": "Quinoa (dry)", "qty": 0.5, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Black beans (canned, 15 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Frozen corn", "qty": 1, "unit": "cup", "section": "Frozen" },
+      { "name": "Bell pepper", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Cherry tomatoes", "qty": 1, "unit": "pint", "section": "Produce" },
+      { "name": "Avocado", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Cilantro", "qty": 0.5, "unit": "bunch", "section": "Produce" },
+      { "name": "Lime", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Pumpkin seeds", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true }
+    ],
     "steps": [],
     "notes": "Cooked quinoa base, black beans, corn, diced bell pepper, cherry tomatoes, avocado, cilantro lime dressing, pumpkin seeds. Add grilled chicken for 40g."
   },
@@ -1093,7 +1395,7 @@ export const recipes: Recipe[] = [
     "category": "lunch",
     "tool": null,
     "proteinGrams": 34,
-    "servings": null,
+    "servings": 4,
     "prepMin": null,
     "cookMin": null,
     "tags": [
@@ -1101,6 +1403,16 @@ export const recipes: Recipe[] = [
       "Lunch"
     ],
     "ingredients": [],
+    "ingredientItems": [
+      { "name": "Cherry tomatoes", "qty": 1, "unit": "pint", "section": "Produce" },
+      { "name": "English cucumber", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Chickpeas (canned, 15 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Eggs", "qty": 4, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Cooked chicken (rotisserie or grilled)", "qty": 1, "unit": "lb", "section": "Proteins" },
+      { "name": "Bacon", "qty": 4, "unit": "oz", "section": "Proteins" },
+      { "name": "Blue cheese crumbles (pasteurized)", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "Romaine", "qty": 1, "unit": "head", "section": "Produce" }
+    ],
     "steps": [],
     "notes": "Layer: dressing, cherry tomatoes, cucumber, chickpeas, hard boiled egg slices, shredded chicken, bacon bits, blue cheese, chopped romaine on top. Shake and dump when eating."
   },
@@ -1146,13 +1458,21 @@ export const recipes: Recipe[] = [
     "category": "lunch",
     "tool": null,
     "proteinGrams": 28,
-    "servings": null,
+    "servings": 2,
     "prepMin": null,
     "cookMin": null,
     "tags": [
       "Lunch"
     ],
     "ingredients": [],
+    "ingredientItems": [
+      { "name": "Cottage cheese (full fat)", "qty": 16, "unit": "oz", "section": "Dairy/Refrigerated" },
+      { "name": "English cucumber", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Cherry tomatoes", "qty": 1, "unit": "pint", "section": "Produce" },
+      { "name": "Avocado", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Hemp seeds", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Everything bagel seasoning", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true }
+    ],
     "steps": [],
     "notes": "1.5 cups cottage cheese, diced cucumber, cherry tomatoes, everything seasoning, avocado, hemp seeds. Savory version of a yogurt bowl."
   },
@@ -1397,5 +1717,652 @@ export const recipes: Recipe[] = [
     "ingredients": [],
     "steps": [],
     "notes": "1 slice sourdough, avocado, 1 fried egg"
+  },
+  {
+    "slug": "asian-turkey-lettuce-wraps",
+    "name": "Asian Turkey Lettuce Wraps",
+    "category": "dinner",
+    "tool": "Skillet",
+    "proteinGrams": 38,
+    "servings": 4,
+    "prepMin": 15,
+    "cookMin": 20,
+    "tags": [
+      "Skillet",
+      "Asian",
+      "High Protein",
+      "Summer",
+      "Dinner"
+    ],
+    "ingredients": [
+      "1.5 lb ground turkey (93/7)",
+      "2 tbsp avocado oil",
+      "1 yellow onion, finely diced",
+      "4 garlic cloves, minced",
+      "2 tbsp fresh ginger, minced (about 2-inch knob)",
+      "8 oz water chestnuts, drained and chopped",
+      "1 red bell pepper, finely diced",
+      "3 tbsp low-sodium soy sauce (or tamari)",
+      "2 tbsp hoisin sauce",
+      "1 tbsp rice vinegar",
+      "1 tbsp toasted sesame oil",
+      "1 tsp red pepper flakes (adjust to taste)",
+      "1/2 tsp ground white pepper",
+      "2 heads butter lettuce, washed and leaves separated",
+      "3 green onions, sliced thin",
+      "1/4 cup roasted cashews, chopped",
+      "Sriracha for serving (optional)"
+    ],
+    "ingredientItems": [
+      { "name": "Ground turkey (93/7)", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Avocado oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Garlic", "qty": 4, "unit": "clove", "section": "Produce" },
+      { "name": "Fresh ginger root", "qty": 2, "unit": "tbsp", "section": "Produce" },
+      { "name": "Water chestnuts (canned, 8 oz)", "qty": 1, "unit": "can", "section": "Pantry/Dry" },
+      { "name": "Red bell pepper", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Low-sodium soy sauce", "qty": 3, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Hoisin sauce", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Rice vinegar", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Toasted sesame oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Red pepper flakes", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Butter lettuce (head)", "qty": 2, "unit": "head", "section": "Produce" },
+      { "name": "Green onions", "qty": 3, "unit": "ea", "section": "Produce" },
+      { "name": "Roasted cashews", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry" }
+    ],
+    "steps": [
+      "Heat 1 tbsp oil in large skillet over medium-high. Add onion, cook 3 min until translucent.",
+      "Add garlic, ginger, red pepper flakes, white pepper. Cook 1 min until fragrant.",
+      "Add ground turkey, break up with a spoon. Cook 6-8 min until browned and no longer pink (internal 165F).",
+      "Add water chestnuts and bell pepper, cook 3 min until peppers soften.",
+      "Whisk soy sauce, hoisin, rice vinegar, sesame oil in a small bowl. Pour over turkey, toss to coat. Simmer 2 min until sauce reduces and coats meat.",
+      "Spoon into butter lettuce cups. Top with green onions, chopped cashews, sriracha if desired."
+    ],
+    "notes": "Cook turkey fully through (165F internal) for pregnancy safety. Leftover filling great cold next-day over rice."
+  },
+  {
+    "slug": "turkey-burgers-with-avocado-and-slaw",
+    "name": "Turkey Burgers with Avocado and Slaw",
+    "category": "dinner",
+    "tool": "Skillet or Grill",
+    "proteinGrams": 42,
+    "servings": 4,
+    "prepMin": 15,
+    "cookMin": 15,
+    "tags": [
+      "Skillet",
+      "Grill",
+      "High Protein",
+      "Summer",
+      "Dinner"
+    ],
+    "ingredients": [
+      "1.5 lb ground turkey (93/7)",
+      "1/4 cup panko breadcrumbs",
+      "1 large egg",
+      "2 garlic cloves, minced",
+      "1 tsp onion powder",
+      "1 tsp smoked paprika",
+      "1 tsp ground cumin",
+      "1/2 tsp ground coriander",
+      "1/2 tsp dried oregano",
+      "3/4 tsp salt",
+      "1/4 tsp ground black pepper",
+      "2 tbsp avocado oil (for cooking)",
+      "4 brioche or potato buns, toasted",
+      "4 slices pasteurized pepper jack or cheddar",
+      "2 ripe avocados, sliced",
+      "1 large tomato, sliced",
+      "Butter lettuce leaves",
+      "Slaw: 3 cups shredded green cabbage (or coleslaw mix)",
+      "Slaw: 1 large carrot, shredded",
+      "Slaw: 2 tbsp apple cider vinegar",
+      "Slaw: 1 tbsp honey",
+      "Slaw: 1 tbsp dijon mustard",
+      "Slaw: 1/4 cup mayonnaise",
+      "Slaw: 1/2 tsp celery seed",
+      "Slaw: Salt and pepper to taste"
+    ],
+    "ingredientItems": [
+      { "name": "Ground turkey (93/7)", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Panko breadcrumbs", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Egg", "qty": 1, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Garlic", "qty": 2, "unit": "clove", "section": "Produce" },
+      { "name": "Onion powder", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Smoked paprika", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Cumin", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Avocado oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Brioche or potato buns", "qty": 4, "unit": "ea", "section": "Bakery" },
+      { "name": "Pasteurized pepper jack or cheddar slices", "qty": 4, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Avocado", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Tomato (large)", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Butter lettuce", "qty": 1, "unit": "head", "section": "Produce" },
+      { "name": "Green cabbage (or coleslaw mix)", "qty": 1, "unit": "head", "section": "Produce" },
+      { "name": "Carrot (large)", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Apple cider vinegar", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Honey", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Dijon mustard", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Mayonnaise", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Celery seed", "qty": 0.5, "unit": "tsp", "section": "Pantry/Dry", "pantry": true }
+    ],
+    "steps": [
+      "Make slaw first so flavors meld: whisk vinegar, honey, dijon, mayo, celery seed, salt, pepper. Toss with cabbage and carrot. Refrigerate.",
+      "In bowl combine ground turkey, panko, egg, garlic, onion powder, smoked paprika, cumin, coriander, oregano, salt, pepper. Mix gently with hands; do not overwork.",
+      "Form 4 patties about 4 inches wide, 3/4 inch thick. Press a slight thumbprint dimple in the center of each (prevents puffing).",
+      "Heat avocado oil in large skillet (or oil grill) over medium-high. Cook patties 5-6 min per side until internal temp hits 165F.",
+      "Top each patty with cheese in last minute to melt.",
+      "Toast buns. Build: bun, lettuce, tomato, patty, avocado slices, slaw, top bun."
+    ],
+    "notes": "Cook fully to 165F internal for pregnancy safety. Slaw doubles as a side and keeps 4 days. Make extra patties and freeze raw for an easy weeknight dinner."
+  },
+  {
+    "slug": "asian-sesame-chicken-salad",
+    "name": "Asian Sesame Chicken Salad",
+    "category": "lunch",
+    "tool": "No-cook (uses cooked chicken)",
+    "proteinGrams": 38,
+    "servings": 4,
+    "prepMin": 15,
+    "cookMin": 0,
+    "tags": [
+      "Lunch",
+      "Salad",
+      "Asian",
+      "High Protein",
+      "No-Cook",
+      "Summer"
+    ],
+    "ingredients": [
+      "3 cups cooked chicken, shredded or chopped (rotisserie, IP shredded, or grilled breast)",
+      "6 cups napa cabbage, shredded (or mixed greens)",
+      "2 cups red cabbage, shredded",
+      "2 large carrots, julienned or shredded",
+      "1 cup shelled edamame (thawed if frozen)",
+      "1 red bell pepper, julienned",
+      "1 cup snow peas, thinly sliced",
+      "1/2 cup green onions, sliced",
+      "1/3 cup roasted cashews or sliced almonds",
+      "2 tbsp sesame seeds (toasted)",
+      "1/2 cup chopped cilantro (optional)",
+      "Dressing: 1/4 cup low-sodium soy sauce",
+      "Dressing: 3 tbsp rice vinegar",
+      "Dressing: 2 tbsp toasted sesame oil",
+      "Dressing: 2 tbsp neutral oil (avocado)",
+      "Dressing: 1 tbsp honey",
+      "Dressing: 1 tbsp fresh ginger, grated",
+      "Dressing: 2 garlic cloves, minced",
+      "Dressing: 1 tsp Sriracha (or to taste)"
+    ],
+    "ingredientItems": [
+      { "name": "Cooked chicken (rotisserie or grilled)", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Napa cabbage", "qty": 1, "unit": "head", "section": "Produce" },
+      { "name": "Red cabbage", "qty": 1, "unit": "head", "section": "Produce" },
+      { "name": "Carrots (large)", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Shelled edamame", "qty": 1, "unit": "cup", "section": "Frozen" },
+      { "name": "Red bell pepper", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Snow peas", "qty": 1, "unit": "cup", "section": "Produce" },
+      { "name": "Green onions", "qty": 4, "unit": "ea", "section": "Produce" },
+      { "name": "Roasted cashews", "qty": 0.33, "unit": "cup", "section": "Pantry/Dry" },
+      { "name": "Sesame seeds", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Cilantro", "qty": 0.5, "unit": "bunch", "section": "Produce" },
+      { "name": "Low-sodium soy sauce", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Rice vinegar", "qty": 3, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Toasted sesame oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Honey", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Fresh ginger root", "qty": 1, "unit": "tbsp", "section": "Produce" },
+      { "name": "Garlic", "qty": 2, "unit": "clove", "section": "Produce" }
+    ],
+    "steps": [
+      "Whisk all dressing ingredients in a jar; shake until emulsified.",
+      "In large bowl toss cabbages, carrots, bell pepper, snow peas, edamame.",
+      "Add chicken on top.",
+      "Drizzle dressing, toss to coat.",
+      "Top with green onions, cashews, sesame seeds, cilantro."
+    ],
+    "notes": "For mason jar lunches: dressing on the bottom, harder veg in the middle, chicken layered, greens on top. Shake when ready to eat. Holds 3-4 days."
+  },
+  {
+    "slug": "sheet-pan-honey-soy-salmon",
+    "name": "Sheet Pan Honey-Soy Salmon",
+    "category": "dinner",
+    "tool": "Sheet Pan + Oven",
+    "proteinGrams": 38,
+    "servings": 4,
+    "prepMin": 10,
+    "cookMin": 20,
+    "tags": [
+      "Sheet Pan",
+      "Asian",
+      "High Protein",
+      "Summer",
+      "Dinner"
+    ],
+    "ingredients": [
+      "4 (6 oz) salmon fillets",
+      "1 lb broccoli florets",
+      "1 lb sugar snap peas (or green beans)",
+      "1 red bell pepper, sliced",
+      "2 tbsp avocado oil",
+      "1/2 tsp salt",
+      "1/4 tsp ground black pepper",
+      "Glaze: 1/4 cup low-sodium soy sauce",
+      "Glaze: 3 tbsp honey",
+      "Glaze: 2 tbsp rice vinegar",
+      "Glaze: 1 tbsp toasted sesame oil",
+      "Glaze: 4 garlic cloves, minced",
+      "Glaze: 1 tbsp fresh ginger, grated",
+      "Glaze: 1 tsp red pepper flakes",
+      "1 tsp toasted sesame seeds (garnish)",
+      "Sliced green onions (garnish)",
+      "Cooked jasmine rice (for serving)"
+    ],
+    "ingredientItems": [
+      { "name": "Salmon fillets (6 oz)", "qty": 4, "unit": "ea", "section": "Proteins" },
+      { "name": "Broccoli florets", "qty": 1, "unit": "lb", "section": "Produce" },
+      { "name": "Sugar snap peas", "qty": 1, "unit": "lb", "section": "Produce" },
+      { "name": "Red bell pepper", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Avocado oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Low-sodium soy sauce", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Honey", "qty": 3, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Rice vinegar", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Toasted sesame oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Garlic", "qty": 4, "unit": "clove", "section": "Produce" },
+      { "name": "Fresh ginger root", "qty": 1, "unit": "tbsp", "section": "Produce" },
+      { "name": "Red pepper flakes", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Sesame seeds", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Green onions", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Jasmine rice (dry)", "qty": 1, "unit": "cup", "section": "Pantry/Dry", "pantry": true }
+    ],
+    "steps": [
+      "Preheat oven to 425F. Line a sheet pan with parchment.",
+      "Whisk all glaze ingredients in a small bowl.",
+      "Toss broccoli, snap peas, bell pepper with avocado oil, salt, pepper. Spread on one half of the sheet pan.",
+      "Pat salmon dry. Place on the other half. Brush generously with glaze; reserve half the glaze for serving.",
+      "Roast 15-18 min until salmon flakes easily and reaches 145F internal.",
+      "Drizzle reserved glaze over salmon. Garnish with sesame seeds and green onions. Serve over jasmine rice."
+    ],
+    "notes": "Cook salmon to 145F internal (pregnancy safe). Glaze base also great over chicken or shrimp."
+  },
+  {
+    "slug": "korean-beef-bowls",
+    "name": "Korean Beef Bowls",
+    "category": "dinner",
+    "tool": "Skillet",
+    "proteinGrams": 40,
+    "servings": 4,
+    "prepMin": 10,
+    "cookMin": 20,
+    "tags": [
+      "Skillet",
+      "Asian",
+      "Korean",
+      "High Protein",
+      "Dinner"
+    ],
+    "ingredients": [
+      "1.5 lb 90/10 ground beef",
+      "1 tbsp avocado oil",
+      "1 yellow onion, diced",
+      "6 garlic cloves, minced",
+      "2 tbsp fresh ginger, grated",
+      "1/2 cup low-sodium soy sauce",
+      "1/3 cup brown sugar (or honey)",
+      "2 tbsp rice vinegar",
+      "1 tbsp toasted sesame oil",
+      "1 tsp red pepper flakes (or 1 tbsp gochujang for more heat)",
+      "1/2 tsp ground black pepper",
+      "3 cups cooked jasmine or brown rice",
+      "2 cups shredded carrots",
+      "1 large cucumber, diced",
+      "2 cups baby spinach",
+      "4 large eggs",
+      "2 tbsp toasted sesame seeds",
+      "4 green onions, sliced",
+      "Pasteurized kimchi for serving (optional)"
+    ],
+    "ingredientItems": [
+      { "name": "Ground beef (90/10)", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Avocado oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Garlic", "qty": 6, "unit": "clove", "section": "Produce" },
+      { "name": "Fresh ginger root", "qty": 2, "unit": "tbsp", "section": "Produce" },
+      { "name": "Low-sodium soy sauce", "qty": 0.5, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Brown sugar", "qty": 0.33, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Rice vinegar", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Toasted sesame oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Red pepper flakes", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Jasmine rice (dry)", "qty": 1.5, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Carrots (shredded)", "qty": 2, "unit": "cup", "section": "Produce" },
+      { "name": "English cucumber (large)", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Baby spinach", "qty": 2, "unit": "cup", "section": "Produce" },
+      { "name": "Eggs", "qty": 4, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Sesame seeds", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Green onions", "qty": 4, "unit": "ea", "section": "Produce" }
+    ],
+    "steps": [
+      "Heat 1 tbsp oil in large skillet over medium-high. Add onion, cook 3 min until softened.",
+      "Add garlic and ginger, cook 1 min until fragrant.",
+      "Add ground beef, break up. Cook 8 min until fully browned (160F internal). Drain excess fat.",
+      "Whisk soy sauce, brown sugar, rice vinegar, sesame oil, red pepper flakes, black pepper. Pour over beef, simmer 3-4 min until sauce thickens.",
+      "Add spinach in the last minute, stir until wilted.",
+      "Fry 4 eggs covered until yolks are fully set (4-5 min) — no runny yolk for pregnancy safety.",
+      "Build bowls: rice, beef mixture, carrots, cucumber, egg on top. Garnish sesame seeds and green onions. Add kimchi if using."
+    ],
+    "notes": "Ground beef to 160F, eggs fully cooked through. Leftover beef mixture great cold over greens for next-day lunch."
+  },
+  {
+    "slug": "grilled-shrimp-tacos-with-mango-salsa",
+    "name": "Grilled Shrimp Tacos with Mango Salsa",
+    "category": "dinner",
+    "tool": "Grill or Skillet",
+    "proteinGrams": 36,
+    "servings": 4,
+    "prepMin": 20,
+    "cookMin": 10,
+    "tags": [
+      "Grill",
+      "Skillet",
+      "Seafood",
+      "Summer",
+      "Mexican",
+      "Dinner"
+    ],
+    "ingredients": [
+      "1.5 lb large shrimp, peeled and deveined",
+      "2 tbsp avocado oil",
+      "1.5 tsp ground cumin",
+      "1.5 tsp smoked paprika",
+      "1 tsp chili powder",
+      "1 tsp garlic powder",
+      "1/2 tsp ground coriander",
+      "1/2 tsp salt",
+      "Juice of 1 lime",
+      "12 small corn tortillas",
+      "Mango salsa: 2 ripe mangoes, diced",
+      "Mango salsa: 1/2 red onion, finely diced",
+      "Mango salsa: 1 jalapeño, seeded and minced",
+      "Mango salsa: 1/2 cup cilantro, chopped",
+      "Mango salsa: Juice of 1 lime",
+      "Mango salsa: 1/4 tsp salt",
+      "Toppings: 2 avocados, sliced",
+      "Toppings: 1 cup shredded green cabbage",
+      "Toppings: Cotija or queso fresco (pasteurized)",
+      "Toppings: Lime wedges"
+    ],
+    "ingredientItems": [
+      { "name": "Large shrimp (peeled, deveined)", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Avocado oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Cumin", "qty": 1.5, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Smoked paprika", "qty": 1.5, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Chili powder", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Garlic powder", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Lime", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Small corn tortillas", "qty": 12, "unit": "ea", "section": "Pantry/Dry" },
+      { "name": "Ripe mango", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Red onion", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Jalapeño", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Cilantro", "qty": 0.5, "unit": "bunch", "section": "Produce" },
+      { "name": "Avocado", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Green cabbage", "qty": 0.5, "unit": "head", "section": "Produce" },
+      { "name": "Cotija or queso fresco (pasteurized)", "qty": 4, "unit": "oz", "section": "Dairy/Refrigerated" }
+    ],
+    "steps": [
+      "Make mango salsa first: combine mango, red onion, jalapeño, cilantro, lime juice, salt in a bowl. Set aside 15 min to marry flavors.",
+      "Toss shrimp with avocado oil, cumin, smoked paprika, chili powder, garlic powder, coriander, salt, lime juice. Marinate 10 min.",
+      "Heat grill or cast iron skillet over medium-high until hot.",
+      "Cook shrimp 2 min per side until opaque, pink, curled, and 145F internal.",
+      "Warm tortillas (char over flame or in dry skillet 20 sec per side).",
+      "Build tacos: tortilla, cabbage, shrimp, mango salsa, avocado, cheese, squeeze of lime."
+    ],
+    "notes": "Cook shrimp to 145F internal. Pasteurized cheese only. Mango salsa also great over salmon."
+  },
+  {
+    "slug": "miso-glazed-salmon",
+    "name": "Miso Glazed Salmon",
+    "category": "dinner",
+    "tool": "Sheet Pan + Oven",
+    "proteinGrams": 38,
+    "servings": 4,
+    "prepMin": 15,
+    "cookMin": 15,
+    "tags": [
+      "Sheet Pan",
+      "Asian",
+      "Japanese",
+      "High Protein",
+      "Summer",
+      "Dinner"
+    ],
+    "ingredients": [
+      "4 (6 oz) salmon fillets",
+      "Glaze: 1/4 cup white miso paste",
+      "Glaze: 3 tbsp mirin (or rice vinegar + 1 tsp sugar)",
+      "Glaze: 2 tbsp low-sodium soy sauce",
+      "Glaze: 2 tbsp honey",
+      "Glaze: 1 tbsp toasted sesame oil",
+      "Glaze: 1 tbsp fresh ginger, grated",
+      "Glaze: 2 garlic cloves, minced",
+      "1 lb baby bok choy, halved lengthwise",
+      "8 oz shiitake mushrooms, sliced",
+      "2 tbsp avocado oil",
+      "1/2 tsp salt",
+      "Cooked jasmine rice (for serving)",
+      "Toasted sesame seeds (garnish)",
+      "Sliced green onions (garnish)"
+    ],
+    "ingredientItems": [
+      { "name": "Salmon fillets (6 oz)", "qty": 4, "unit": "ea", "section": "Proteins" },
+      { "name": "White miso paste", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Mirin", "qty": 3, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Low-sodium soy sauce", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Honey", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Toasted sesame oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Fresh ginger root", "qty": 1, "unit": "tbsp", "section": "Produce" },
+      { "name": "Garlic", "qty": 2, "unit": "clove", "section": "Produce" },
+      { "name": "Baby bok choy", "qty": 1, "unit": "lb", "section": "Produce" },
+      { "name": "Shiitake mushrooms", "qty": 8, "unit": "oz", "section": "Produce" },
+      { "name": "Avocado oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Jasmine rice (dry)", "qty": 1, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Green onions", "qty": 2, "unit": "ea", "section": "Produce" }
+    ],
+    "steps": [
+      "Whisk all glaze ingredients in a bowl until smooth.",
+      "Pat salmon dry, place in shallow dish, brush half the glaze over the top. Marinate 15-30 min if time allows.",
+      "Preheat oven to 425F. Line a sheet pan with parchment.",
+      "Toss bok choy and shiitake with avocado oil and salt. Spread on one half of pan.",
+      "Place salmon on other half. Brush with additional glaze.",
+      "Roast 12-15 min until salmon flakes and reaches 145F internal; bok choy is tender.",
+      "Drizzle reserved glaze over salmon. Garnish with sesame seeds and green onions. Serve over jasmine rice."
+    ],
+    "notes": "Cook salmon to 145F internal (pregnancy safe). White miso is mild and slightly sweet; if you only have red/dark miso, halve the amount."
+  },
+  {
+    "slug": "thai-basil-chicken",
+    "name": "Thai Basil Chicken",
+    "category": "dinner",
+    "tool": "Skillet (wok-style)",
+    "proteinGrams": 40,
+    "servings": 4,
+    "prepMin": 15,
+    "cookMin": 15,
+    "tags": [
+      "Skillet",
+      "Asian",
+      "Thai",
+      "High Protein",
+      "Summer",
+      "Dinner"
+    ],
+    "ingredients": [
+      "1.5 lb boneless skinless chicken thighs, finely chopped (or ground chicken)",
+      "2 tbsp avocado oil",
+      "6 garlic cloves, minced",
+      "4 Thai red chilies, minced (or 2 jalapeños for milder heat)",
+      "1 shallot, thinly sliced",
+      "3 tbsp low-sodium soy sauce",
+      "2 tbsp oyster sauce",
+      "1 tbsp fish sauce",
+      "1 tbsp brown sugar",
+      "1/4 cup chicken broth",
+      "1.5 cups Thai basil leaves (Italian basil works in a pinch)",
+      "1 red bell pepper, sliced",
+      "4 large eggs (for fried egg topping)",
+      "Cooked jasmine rice (for serving)",
+      "Cucumber slices (for serving)",
+      "Lime wedges (for serving)"
+    ],
+    "ingredientItems": [
+      { "name": "Boneless skinless chicken thighs", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Avocado oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Garlic", "qty": 6, "unit": "clove", "section": "Produce" },
+      { "name": "Thai red chilies (or jalapeños)", "qty": 4, "unit": "ea", "section": "Produce" },
+      { "name": "Shallot", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Low-sodium soy sauce", "qty": 3, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Oyster sauce", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Fish sauce", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Brown sugar", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Chicken broth", "qty": 0.25, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Thai basil", "qty": 1, "unit": "bunch", "section": "Produce" },
+      { "name": "Red bell pepper", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Eggs", "qty": 4, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Jasmine rice (dry)", "qty": 1, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "English cucumber", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Lime", "qty": 2, "unit": "ea", "section": "Produce" }
+    ],
+    "steps": [
+      "Heat 1 tbsp oil in large skillet over high heat until shimmering.",
+      "Add garlic, chilies, shallot. Stir-fry 30 seconds until fragrant.",
+      "Add chicken, break apart with spatula. Stir-fry 6-7 min until fully cooked through (165F internal).",
+      "Add bell pepper, soy sauce, oyster sauce, fish sauce, brown sugar, broth. Stir-fry 2-3 min until sauce coats chicken.",
+      "Off heat, stir in Thai basil — wilts immediately from residual heat.",
+      "In a separate pan fry 4 eggs covered until yolks are fully set (4-5 min) — no runny yolk for pregnancy safety.",
+      "Serve over jasmine rice with a fried egg on top, cucumber slices and lime wedges on the side."
+    ],
+    "notes": "Cook chicken to 165F and eggs through-set. Adjust chili count to your heat tolerance — 4 is mid/hot, 2 is mild. Pure spices throughout; no premade blends needed."
+  },
+  {
+    "slug": "beef-burgers-with-caramelized-onions",
+    "name": "Beef Burgers with Caramelized Onions",
+    "category": "dinner",
+    "tool": "Skillet or Grill",
+    "proteinGrams": 44,
+    "servings": 4,
+    "prepMin": 15,
+    "cookMin": 35,
+    "tags": [
+      "Skillet",
+      "Grill",
+      "High Protein",
+      "Summer",
+      "Dinner"
+    ],
+    "ingredients": [
+      "1.5 lb 85/15 ground beef",
+      "1 tsp salt",
+      "1/2 tsp ground black pepper",
+      "1 tsp garlic powder",
+      "1 tsp onion powder",
+      "1 tsp smoked paprika",
+      "1 tsp Worcestershire sauce",
+      "Caramelized onions: 2 large yellow onions, thinly sliced",
+      "Caramelized onions: 2 tbsp unsalted butter",
+      "Caramelized onions: 1 tbsp olive oil",
+      "Caramelized onions: 1 tbsp balsamic vinegar",
+      "Caramelized onions: 1/4 tsp salt",
+      "Caramelized onions: Pinch of sugar",
+      "4 brioche or potato buns, toasted",
+      "4 slices pasteurized aged cheddar or gruyere",
+      "2 ripe tomatoes, sliced",
+      "Butter lettuce leaves",
+      "Dijon mustard",
+      "Pickle slices"
+    ],
+    "ingredientItems": [
+      { "name": "Ground beef (85/15)", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Garlic powder", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Onion powder", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Smoked paprika", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Worcestershire sauce", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Yellow onion (large)", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Unsalted butter", "qty": 2, "unit": "tbsp", "section": "Dairy/Refrigerated", "pantry": true },
+      { "name": "Olive oil", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Balsamic vinegar", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Brioche or potato buns", "qty": 4, "unit": "ea", "section": "Bakery" },
+      { "name": "Aged cheddar or gruyere slices (pasteurized)", "qty": 4, "unit": "ea", "section": "Dairy/Refrigerated" },
+      { "name": "Ripe tomatoes", "qty": 2, "unit": "ea", "section": "Produce" },
+      { "name": "Butter lettuce", "qty": 1, "unit": "head", "section": "Produce" },
+      { "name": "Dijon mustard", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Pickles (jarred)", "qty": 1, "unit": "jar", "section": "Pantry/Dry", "pantry": true }
+    ],
+    "steps": [
+      "Caramelize onions first: melt butter with olive oil in a wide skillet over medium-low. Add onions and salt; stir to coat. Cook 25-30 min, stirring every few minutes, until deep golden brown. Add balsamic vinegar and pinch of sugar in the last 2 min. Set aside.",
+      "Mix beef with salt, pepper, garlic powder, onion powder, smoked paprika, Worcestershire. Form 4 patties about 4 inches wide. Press a thumbprint dimple in the center of each.",
+      "Heat a clean skillet (or grill) over medium-high. Cook patties 4-5 min per side until internal temp reaches 160F (pregnancy-safe).",
+      "Top each patty with cheese in the last minute to melt.",
+      "Build: bun, lettuce, mustard, patty, cheese, caramelized onions, tomato, pickles, top bun."
+    ],
+    "notes": "Cook beef fully through to 160F internal for pregnancy safety. Caramelized onions can be made up to 3 days ahead and refrigerated."
+  },
+  {
+    "slug": "beef-stroganoff",
+    "name": "Beef Stroganoff",
+    "category": "dinner",
+    "tool": "Skillet",
+    "proteinGrams": 42,
+    "servings": 4,
+    "prepMin": 15,
+    "cookMin": 30,
+    "tags": [
+      "Skillet",
+      "High Protein",
+      "Comfort",
+      "Dinner"
+    ],
+    "ingredients": [
+      "1.5 lb beef sirloin (or top round), sliced thin against the grain",
+      "1 lb cremini or button mushrooms, sliced",
+      "1 large yellow onion, diced",
+      "4 garlic cloves, minced",
+      "3 tbsp unsalted butter (divided)",
+      "2 tbsp avocado oil",
+      "2 tbsp all-purpose flour",
+      "2 cups low-sodium beef broth",
+      "1 tbsp Worcestershire sauce",
+      "1 tbsp Dijon mustard",
+      "1 cup sour cream (full fat)",
+      "12 oz egg noodles",
+      "1 tsp smoked paprika",
+      "1 tsp salt",
+      "1/2 tsp ground black pepper",
+      "1/4 cup fresh parsley, chopped (garnish)"
+    ],
+    "ingredientItems": [
+      { "name": "Beef sirloin (or top round), sliced thin", "qty": 1.5, "unit": "lb", "section": "Proteins" },
+      { "name": "Cremini or button mushrooms", "qty": 1, "unit": "lb", "section": "Produce" },
+      { "name": "Yellow onion (large)", "qty": 1, "unit": "ea", "section": "Produce" },
+      { "name": "Garlic", "qty": 4, "unit": "clove", "section": "Produce" },
+      { "name": "Unsalted butter", "qty": 3, "unit": "tbsp", "section": "Dairy/Refrigerated", "pantry": true },
+      { "name": "Avocado oil", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "All-purpose flour", "qty": 2, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Low-sodium beef broth", "qty": 2, "unit": "cup", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Worcestershire sauce", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Dijon mustard", "qty": 1, "unit": "tbsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Sour cream (full fat)", "qty": 1, "unit": "cup", "section": "Dairy/Refrigerated" },
+      { "name": "Egg noodles", "qty": 12, "unit": "oz", "section": "Pantry/Dry" },
+      { "name": "Smoked paprika", "qty": 1, "unit": "tsp", "section": "Pantry/Dry", "pantry": true },
+      { "name": "Fresh parsley", "qty": 0.25, "unit": "bunch", "section": "Produce" }
+    ],
+    "steps": [
+      "Bring a large pot of salted water to a boil for the noodles.",
+      "Pat beef dry. Season with 1/2 tsp salt, pepper, and smoked paprika.",
+      "Heat 1 tbsp butter + avocado oil in a large skillet over medium-high. Sear beef in two batches, 1-2 min per side until browned and cooked through to 160F internal. Transfer to a plate.",
+      "Add remaining 2 tbsp butter to skillet. Add onion, cook 4 min until softened. Add mushrooms, cook 6-8 min until they release their liquid and brown.",
+      "Add garlic, cook 1 min. Sprinkle flour over the pan, stir 1 min to cook out the raw taste.",
+      "Pour in beef broth, scraping up browned bits. Add Worcestershire and Dijon. Simmer 5 min until thickened.",
+      "Meanwhile, cook egg noodles per package directions, drain.",
+      "Off heat, stir in sour cream and remaining 1/2 tsp salt. Return beef to skillet, toss to coat. Do not boil after adding sour cream (it will break).",
+      "Serve over egg noodles, garnish with parsley."
+    ],
+    "notes": "Cook beef fully to 160F internal for pregnancy safety. Sour cream is added off-heat to prevent curdling. Leftovers reheat well — add a splash of broth to loosen."
   }
 ];

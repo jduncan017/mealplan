@@ -20,6 +20,7 @@ const items = [
 
 export function BottomNav() {
   const pathname = usePathname();
+  if (pathname?.startsWith("/plan")) return null;
   return (
     <nav className="fixed bottom-0 inset-x-0 z-40 border-t-2 border-app-border bg-surface shadow-navTop no-print pb-[max(env(safe-area-inset-bottom),0.75rem)]">
       <ul className="mx-auto flex max-w-3xl items-stretch justify-between px-2">

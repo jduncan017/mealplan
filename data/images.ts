@@ -637,5 +637,125 @@ export const images: Record<string, RecipeImageData> = {
       "photoLink": "https://unsplash.com/photos/sandwich-on-table-sBKLiRiunK0",
       "userLink": "https://unsplash.com/@youjeencho"
     }
+  },
+  "asian-turkey-lettuce-wraps": {
+    "url": "https://images.unsplash.com/photo-1593967858534-40654ea9607b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxhc2lhbiUyMHR1cmtleSUyMGxldHR1Y2UlMjB3cmFwcyUyMGRpbm5lciUyMHBsYXRlfGVufDF8MHx8fDE3NzkzMTcwMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1593967858534-40654ea9607b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxhc2lhbiUyMHR1cmtleSUyMGxldHR1Y2UlMjB3cmFwcyUyMGRpbm5lciUyMHBsYXRlfGVufDF8MHx8fDE3NzkzMTcwMzF8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#d9d9d9",
+    "alt": "sliced cucumber and meat on white and blue ceramic plate",
+    "attribution": {
+      "name": "K8",
+      "username": "_k8_",
+      "photoLink": "https://unsplash.com/photos/sliced-cucumber-and-meat-on-white-and-blue-ceramic-plate-ghLUN41rtEM",
+      "userLink": "https://unsplash.com/@_k8_"
+    }
+  },
+  "turkey-burgers-with-avocado-and-slaw": {
+    "url": "https://images.unsplash.com/photo-1693845261682-4ae639e88e6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHx0dXJrZXklMjBidXJnZXJzJTIwd2l0aCUyMGF2b2NhZG8lMjBhbmQlMjBzbGF3JTIwZGlubmVyJTIwcGxhdGV8ZW58MXwwfHx8MTc3OTMxNzAzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1693845261682-4ae639e88e6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHx0dXJrZXklMjBidXJnZXJzJTIwd2l0aCUyMGF2b2NhZG8lMjBhbmQlMjBzbGF3JTIwZGlubmVyJTIwcGxhdGV8ZW58MXwwfHx8MTc3OTMxNzAzMnww&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#8c8c73",
+    "alt": "a plate with a hamburger and chips on it",
+    "attribution": {
+      "name": "Natilyn Hicks Photography",
+      "username": "natilyn",
+      "photoLink": "https://unsplash.com/photos/a-plate-with-a-hamburger-and-chips-on-it-Igp-rAKTB0I",
+      "userLink": "https://unsplash.com/@natilyn"
+    }
+  },
+  "asian-sesame-chicken-salad": {
+    "url": "https://images.unsplash.com/photo-1676300186659-030de568e39a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxhc2lhbiUyMHNlc2FtZSUyMGNoaWNrZW4lMjBzYWxhZCUyMGx1bmNoJTIwYm93bHxlbnwxfDB8fHwxNzc5MzE3MDMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1676300186659-030de568e39a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxhc2lhbiUyMHNlc2FtZSUyMGNoaWNrZW4lMjBzYWxhZCUyMGx1bmNoJTIwYm93bHxlbnwxfDB8fHwxNzc5MzE3MDMzfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#d9d9d9",
+    "alt": "a white bowl filled with lettuce and chicken",
+    "attribution": {
+      "name": "Orkun Orcan",
+      "username": "orkunorcan",
+      "photoLink": "https://unsplash.com/photos/a-white-bowl-filled-with-lettuce-and-chicken-x-YS_Z_YPns",
+      "userLink": "https://unsplash.com/@orkunorcan"
+    }
+  },
+  "korean-beef-bowls": {
+    "url": "https://images.unsplash.com/photo-1673960616288-0cb46f318a68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBiZWVmJTIwYm93bHMlMjBkaW5uZXIlMjBwbGF0ZXxlbnwxfDB8fHwxNzc5MzE3MDM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1673960616288-0cb46f318a68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBiZWVmJTIwYm93bHMlMjBkaW5uZXIlMjBwbGF0ZXxlbnwxfDB8fHwxNzc5MzE3MDM0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#d9d9d9",
+    "alt": "a white plate topped with meat and rice",
+    "attribution": {
+      "name": "Sandie Clarke",
+      "username": "honeypoppet",
+      "photoLink": "https://unsplash.com/photos/a-white-plate-topped-with-meat-and-rice-I5RmU0wtvpw",
+      "userLink": "https://unsplash.com/@honeypoppet"
+    }
+  },
+  "grilled-shrimp-tacos-with-mango-salsa": {
+    "url": "https://images.unsplash.com/photo-1611699363917-71e903ed1a25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwc2hyaW1wJTIwdGFjb3MlMjB3aXRoJTIwbWFuZ28lMjBzYWxzYSUyMGRpbm5lciUyMHBsYXRlfGVufDF8MHx8fDE3NzkzMTcwMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1611699363917-71e903ed1a25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwc2hyaW1wJTIwdGFjb3MlMjB3aXRoJTIwbWFuZ28lMjBzYWxzYSUyMGRpbm5lciUyMHBsYXRlfGVufDF8MHx8fDE3NzkzMTcwMzR8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#f38cc0",
+    "alt": "brown and white dish on white ceramic plate",
+    "attribution": {
+      "name": "Davey Gravy",
+      "username": "davey_gravy",
+      "photoLink": "https://unsplash.com/photos/brown-and-white-dish-on-white-ceramic-plate-vQz3vuFMEl4",
+      "userLink": "https://unsplash.com/@davey_gravy"
+    }
+  },
+  "sheet-pan-honey-soy-salmon": {
+    "url": "https://images.unsplash.com/photo-1627857638952-642f8cbba8da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxnbGF6ZWQlMjBzYWxtb24lMjBicm9jY29saXxlbnwxfDB8fHwxNzc5MzE3MDYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1627857638952-642f8cbba8da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxnbGF6ZWQlMjBzYWxtb24lMjBicm9jY29saXxlbnwxfDB8fHwxNzc5MzE3MDYzfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#26260c",
+    "alt": "brown bread on white ceramic plate",
+    "attribution": {
+      "name": "Ben Libby",
+      "username": "blibbs86",
+      "photoLink": "https://unsplash.com/photos/brown-bread-on-white-ceramic-plate-xJBeGxiSYBE",
+      "userLink": "https://unsplash.com/@blibbs86"
+    }
+  },
+  "miso-glazed-salmon": {
+    "url": "https://images.unsplash.com/photo-1580214083041-72c0d930f13e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxtaXNvJTIwZ2xhemVkJTIwc2FsbW9uJTIwZGlubmVyJTIwcGxhdGV8ZW58MXwwfHx8MTc3OTMxODE0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1580214083041-72c0d930f13e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxtaXNvJTIwZ2xhemVkJTIwc2FsbW9uJTIwZGlubmVyJTIwcGxhdGV8ZW58MXwwfHx8MTc3OTMxODE0NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#c0c0c0",
+    "alt": "cooked food on white ceramic plate",
+    "attribution": {
+      "name": "CHUTTERSNAP",
+      "username": "chuttersnap",
+      "photoLink": "https://unsplash.com/photos/cooked-food-on-white-ceramic-plate-cVjvdAZvCt4",
+      "userLink": "https://unsplash.com/@chuttersnap"
+    }
+  },
+  "thai-basil-chicken": {
+    "url": "https://images.unsplash.com/photo-1652265540600-a319e0e4fd81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHx0aGFpJTIwYmFzaWwlMjBjaGlja2VuJTIwZGlubmVyJTIwcGxhdGV8ZW58MXwwfHx8MTc3OTMxODE0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1652265540600-a319e0e4fd81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHx0aGFpJTIwYmFzaWwlMjBjaGlja2VuJTIwZGlubmVyJTIwcGxhdGV8ZW58MXwwfHx8MTc3OTMxODE0NXww&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#d9d9d9",
+    "alt": "a plate of food",
+    "attribution": {
+      "name": "Markus Winkler",
+      "username": "markuswinkler",
+      "photoLink": "https://unsplash.com/photos/a-plate-of-food-7XESYTzyUWw",
+      "userLink": "https://unsplash.com/@markuswinkler"
+    }
+  },
+  "beef-burgers-with-caramelized-onions": {
+    "url": "https://images.unsplash.com/photo-1673646961402-df39d8c32448?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxiZWVmJTIwYnVyZ2VycyUyMHdpdGglMjBjYXJhbWVsaXplZCUyMG9uaW9ucyUyMGRpbm5lciUyMHBsYXRlfGVufDF8MHx8fDE3NzkzMTgxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1673646961402-df39d8c32448?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxiZWVmJTIwYnVyZ2VycyUyMHdpdGglMjBjYXJhbWVsaXplZCUyMG9uaW9ucyUyMGRpbm5lciUyMHBsYXRlfGVufDF8MHx8fDE3NzkzMTgxNDV8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#c0c0c0",
+    "alt": "a white plate topped with meat and vegetables",
+    "attribution": {
+      "name": "Natalia Gusakova",
+      "username": "nataliaraylenegusakova",
+      "photoLink": "https://unsplash.com/photos/a-white-plate-topped-with-meat-and-vegetables-NTPrgH82SBA",
+      "userLink": "https://unsplash.com/@nataliaraylenegusakova"
+    }
+  },
+  "beef-stroganoff": {
+    "url": "https://images.unsplash.com/photo-1693296303873-126aa7f6e5b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxiZWVmJTIwc3Ryb2dhbm9mZiUyMGRpbm5lciUyMHBsYXRlfGVufDF8MHx8fDE3NzkzMTkzOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "smallUrl": "https://images.unsplash.com/photo-1693296303873-126aa7f6e5b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI0ODB8MHwxfHNlYXJjaHwxfHxiZWVmJTIwc3Ryb2dhbm9mZiUyMGRpbm5lciUyMHBsYXRlfGVufDF8MHx8fDE3NzkzMTkzOTN8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "blurColor": "#d9d9d9",
+    "alt": "a black plate topped with mushrooms and rice",
+    "attribution": {
+      "name": "The Design Lady",
+      "username": "sarah35",
+      "photoLink": "https://unsplash.com/photos/a-black-plate-topped-with-mushrooms-and-rice-LEBpfkaYb3I",
+      "userLink": "https://unsplash.com/@sarah35"
+    }
   }
 };
