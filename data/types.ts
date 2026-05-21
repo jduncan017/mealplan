@@ -73,6 +73,7 @@ export interface ShoppingWeek {
   week: number;
   dateLabel: string;
   sections: ShoppingSection[];
+  pantryItems?: ShoppingItem[]; // ingredients tagged pantry (oils, spices, sauces) — surfaced separately for "running low" checks
 }
 
 export interface PrepStep {

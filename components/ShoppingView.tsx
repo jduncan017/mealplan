@@ -4,9 +4,12 @@ import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   Check,
+  ChevronDown,
+  ChevronUp,
   Home,
   ListChecks,
   Package,
+  Plus,
   RotateCcw,
   ShoppingCart,
   X,
@@ -113,6 +116,13 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
     toggle: toggleHave,
     reset: resetHave,
   } = useLocalChecklist(`pantryHave:week:${current.week}`);
+  const {
+    checks: needPantryChecks,
+    toggle: toggleNeedPantry,
+    reset: resetNeedPantry,
+  } = useLocalChecklist(`pantryNeed:week:${current.week}`);
+
+  const [pantryOpen, setPantryOpen] = useState(false);
 
   const mealFilter = useMemo(() => {
     if (current.week === 0) return null;
@@ -147,9 +157,25 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
     });
   }, [current, mealFilter, selectedMeals]);
 
+  const pantryEntries = useMemo(() => {
+    const items = current.pantryItems || [];
+    return items.map((item, i) => ({
+      item,
+      i,
+      id: `pantry:${i}:${item.name}`,
+    }));
+  }, [current]);
+
+  const neededPantryEntries = useMemo(
+    () => pantryEntries.filter(({ id }) => needPantryChecks[id]),
+    [pantryEntries, needPantryChecks]
+  );
+
   const totalItems = useMemo(
-    () => visibleSections.reduce((n, s) => n + s.items.length, 0),
-    [visibleSections]
+    () =>
+      visibleSections.reduce((n, s) => n + s.items.length, 0) +
+      neededPantryEntries.length,
+    [visibleSections, neededPantryEntries]
   );
   const haveCount = useMemo(() => {
     let n = 0;
@@ -164,8 +190,9 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
     for (const { items } of visibleSections) {
       for (const { id } of items) if (checks[id] && !haveChecks[id]) n++;
     }
+    for (const { id } of neededPantryEntries) if (checks[id]) n++;
     return n;
-  }, [visibleSections, checks, haveChecks]);
+  }, [visibleSections, checks, haveChecks, neededPantryEntries]);
 
   const mealsByDay = useMemo(() => {
     if (!mealFilter) return [];
@@ -226,6 +253,7 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
               onClick={() => {
                 reset();
                 resetHave();
+                resetNeedPantry();
               }}
               className="inline-flex items-center gap-1 rounded-pill border border-mpneutral-200 bg-surface px-3 py-1.5 text-xs font-medium text-mpneutral-400 shadow-card hover:text-primary-400"
             >
@@ -315,6 +343,72 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
       )}
 
       <div className="space-y-3">
+        {neededPantryEntries.length > 0 && (
+          <section className="overflow-hidden rounded-card border-2 border-tertiary-200 bg-surface shadow-card">
+            <div className="flex items-center gap-2 border-b border-app-border px-4 py-3">
+              <span className="h-2 w-2 rounded-full bg-tertiary-300" />
+              <h2 className="font-display text-sm font-bold uppercase tracking-wider text-tertiary-400">
+                Pantry restock
+              </h2>
+            </div>
+            <ul className="divide-y divide-app-border px-4">
+              {neededPantryEntries.map(({ item, id }) => {
+                const checked = !!checks[id];
+                return (
+                  <li key={id}>
+                    <div className="flex w-full items-center gap-2 py-3">
+                      <button
+                        onClick={() => toggle(id)}
+                        className="flex flex-1 items-center gap-3 text-left"
+                      >
+                        <span
+                          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 transition ${
+                            checked
+                              ? "border-tertiary-300 bg-tertiary-300 text-white"
+                              : "border-mpneutral-300 bg-background"
+                          }`}
+                        >
+                          {checked && (
+                            <Check className="h-4 w-4 animate-pop" />
+                          )}
+                        </span>
+                        <div className="flex-1 min-w-0">
+                          <div
+                            className={`text-sm font-medium transition ${
+                              checked
+                                ? "text-mpneutral-300 line-through"
+                                : "text-mpneutral-400"
+                            }`}
+                          >
+                            {item.name}
+                            {item.qty && (
+                              <span className="ml-2 text-xs font-normal text-mpneutral-300">
+                                {item.qty}
+                              </span>
+                            )}
+                          </div>
+                          {item.for && (
+                            <div className="text-xs text-mpneutral-300">
+                              {item.for}
+                            </div>
+                          )}
+                        </div>
+                      </button>
+                      <button
+                        onClick={() => toggleNeedPantry(id)}
+                        aria-label="Remove from list"
+                        title="Remove from list"
+                        className="shrink-0 flex h-9 w-9 items-center justify-center rounded-full border border-mpneutral-200 bg-background text-mpneutral-300 transition hover:border-tertiary-300 hover:text-tertiary-400"
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
         {visibleSections.map(({ section, items }) => {
           if (items.length === 0) return null;
           return (
@@ -415,6 +509,88 @@ export function ShoppingView({ weeks }: { weeks: ShoppingWeek[] }) {
             </section>
           );
         })}
+
+        {pantryEntries.length > 0 && (
+          <section className="overflow-hidden rounded-card border border-app-border bg-surface shadow-card">
+            <button
+              onClick={() => setPantryOpen((p) => !p)}
+              className="flex w-full items-center justify-between gap-2 px-4 py-3 text-left"
+            >
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-mpneutral-300" />
+                <h2 className="font-display text-sm font-bold uppercase tracking-wider text-mpneutral-400">
+                  Pantry stock used this week ({pantryEntries.length})
+                </h2>
+              </div>
+              <span className="text-mpneutral-300">
+                {pantryOpen ? (
+                  <ChevronUp className="h-4 w-4" />
+                ) : (
+                  <ChevronDown className="h-4 w-4" />
+                )}
+              </span>
+            </button>
+            {pantryOpen && (
+              <div className="border-t border-app-border">
+                <p className="px-4 pt-3 text-xs text-mpneutral-300">
+                  Spices, oils, sauces, dry goods — assumed on hand. Tap +
+                  Need on any item you&apos;re running low on to add it to
+                  your shopping list.
+                </p>
+                <ul className="divide-y divide-app-border px-4">
+                  {pantryEntries.map(({ item, id }) => {
+                    const needed = !!needPantryChecks[id];
+                    return (
+                      <li key={id}>
+                        <div className="flex w-full items-center gap-2 py-3">
+                          <div className="flex-1 min-w-0">
+                            <div
+                              className={`text-sm font-medium ${
+                                needed
+                                  ? "text-mpneutral-300"
+                                  : "text-mpneutral-400"
+                              }`}
+                            >
+                              {item.name}
+                              {item.qty && (
+                                <span className="ml-2 text-xs font-normal text-mpneutral-300">
+                                  {item.qty}
+                                </span>
+                              )}
+                            </div>
+                            {item.for && (
+                              <div className="text-xs text-mpneutral-300">
+                                {item.for}
+                              </div>
+                            )}
+                          </div>
+                          <button
+                            onClick={() => toggleNeedPantry(id)}
+                            className={`inline-flex shrink-0 items-center gap-1 rounded-pill border px-3 py-1.5 text-xs font-semibold transition ${
+                              needed
+                                ? "border-tertiary-300 bg-tertiary-100 text-tertiary-400"
+                                : "border-mpneutral-200 bg-background text-mpneutral-400 hover:border-tertiary-300 hover:text-tertiary-400"
+                            }`}
+                          >
+                            {needed ? (
+                              <>
+                                <Check className="h-3.5 w-3.5" /> Added
+                              </>
+                            ) : (
+                              <>
+                                <Plus className="h-3.5 w-3.5" /> Need
+                              </>
+                            )}
+                          </button>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
+          </section>
+        )}
       </div>
 
       {filterOpen && mealFilter && (

@@ -134,6 +134,7 @@ export function deriveShoppingWeek(
   }
 
   const agg: Record<string, AggValue> = {};
+  const pantryAgg: Record<string, AggValue> = {};
   for (const usage of used) {
     if (!usage.recipe.ingredientItems) continue;
     const batches = batchesNeeded(usage);
@@ -149,11 +150,11 @@ export function deriveShoppingWeek(
       }
     }
     for (const item of usage.recipe.ingredientItems) {
-      if (item.pantry) continue;
       if (item.derivedFromBase) continue;
+      const target = item.pantry ? pantryAgg : agg;
       const key = aggKey(item);
-      if (!agg[key]) {
-        agg[key] = {
+      if (!target[key]) {
+        target[key] = {
           qty: 0,
           unit: item.unit,
           section: item.section,
@@ -161,9 +162,9 @@ export function deriveShoppingWeek(
           fromRecipes: new Set<string>(),
         };
       }
-      const extra = extraRawByIngredient[item.name] || 0;
-      agg[key].qty += item.qty * batches + extra;
-      agg[key].fromRecipes.add(usage.recipe.name);
+      const extra = item.pantry ? 0 : extraRawByIngredient[item.name] || 0;
+      target[key].qty += item.qty * batches + extra;
+      target[key].fromRecipes.add(usage.recipe.name);
     }
   }
 
@@ -191,9 +192,24 @@ export function deriveShoppingWeek(
     sections.push({ name: sec, items });
   }
 
+  const pantryItems: ShoppingItem[] = [];
+  for (const key of Object.keys(pantryAgg)) {
+    const v = pantryAgg[key];
+    const recipesList: string[] = [];
+    v.fromRecipes.forEach((n) => recipesList.push(n));
+    recipesList.sort();
+    pantryItems.push({
+      name: v.name,
+      qty: formatQty(v.qty, v.unit),
+      for: recipesList.join(", "),
+    });
+  }
+  pantryItems.sort((a, b) => a.name.localeCompare(b.name));
+
   return {
     week: weekIndex,
     dateLabel: dateLabel || `Week ${weekIndex} (auto-derived)`,
     sections,
+    pantryItems,
   };
 }
